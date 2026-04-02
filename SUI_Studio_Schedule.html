@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SUI PILATES STUDIO — スタジオスケジュール（仮設定）</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --dark: #3F3931;
+  --gold: #C4956A;
+  --gold-dim: rgba(196,149,106,.15);
+  --cream: #F5F2EE;
+  --warm: #8A8580;
+  --white: #ffffff;
+  --border: rgba(196,149,106,.2);
+  --serif: 'Cormorant Garamond','serif';
+  --sans: 'Noto Sans JP',sans-serif;
+  --riad: #4a8a9a;
+  --oasis: #8a6d45;
+  --qasr: #7a5a8a;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--sans); background: var(--cream); color: var(--dark); min-height: 100vh; font-size: 13px; line-height: 1.6; }
+.header { background: var(--white); border-bottom: 1px solid var(--border); padding: 28px 40px 24px; }
+.header-top { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 16px; }
+.logo { font: 700 28px var(--serif); color: var(--gold); letter-spacing: 6px; }
+.logo-sub { font: 300 10px var(--sans); color: var(--warm); letter-spacing: 2px; margin-left: 14px; }
+.draft-badge { background: #e05040; color: #fff; font: 700 10px var(--sans); padding: 4px 14px; border-radius: 20px; letter-spacing: .08em; }
+.header-title { font: 700 22px var(--serif); color: var(--dark); letter-spacing: 1px; margin-bottom: 4px; }
+.header-meta { font: 300 11px var(--sans); color: var(--warm); }
+.header-meta b { color: var(--gold); font-weight: 500; }
+.rooms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 24px 40px; }
+.room-card { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 20px; position: relative; overflow: hidden; }
+.room-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+.room-card.riad::before { background: var(--riad); }
+.room-card.oasis::before { background: var(--oasis); }
+.room-card.qasr::before { background: var(--qasr); }
+.room-name-ar { font: 600 20px var(--serif); letter-spacing: 2px; margin-bottom: 2px; }
+.room-card.riad .room-name-ar { color: var(--riad); }
+.room-card.oasis .room-name-ar { color: var(--oasis); }
+.room-card.qasr .room-name-ar { color: var(--qasr); }
+.room-name-jp { font: 300 10px var(--sans); color: var(--warm); margin-bottom: 4px; }
+.room-concept { font: 400 11px var(--sans); color: var(--gold); margin-bottom: 8px; font-style: italic; }
+.room-spec { font: 400 12px var(--sans); color: var(--dark); line-height: 1.8; }
+.room-spec b { color: var(--gold); }
+.room-equip { font: 300 10px var(--sans); color: var(--warm); margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--border); }
+.info-bar { display: flex; gap: 24px; padding: 16px 40px; background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); font: 400 12px var(--sans); color: var(--dark); flex-wrap: wrap; }
+.info-item { display: flex; align-items: center; gap: 6px; }
+.info-dot { width: 8px; height: 8px; border-radius: 50%; }
+.info-label { font: 300 10px var(--sans); color: var(--warm); margin-right: 4px; }
+.schedule-wrap { padding: 24px 40px 60px; overflow-x: auto; }
+.day-tabs { display: flex; gap: 2px; margin-bottom: 20px; border-bottom: 1px solid var(--border); }
+.day-tab { padding: 10px 20px; font: 400 12px var(--sans); color: var(--warm); cursor: pointer; border: none; background: none; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all .15s; }
+.day-tab:hover { color: var(--dark); }
+.day-tab.active { color: var(--gold); border-bottom-color: var(--gold); font-weight: 500; }
+.day-tab .day-sub { font: 300 9px var(--sans); color: var(--warm); display: block; }
+.timetable { display: grid; grid-template-columns: 70px repeat(3, 1fr); gap: 1px; background: rgba(196,149,106,.1); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; min-width: 700px; }
+.tt-header { background: var(--white); padding: 10px 8px; font: 500 10px var(--sans); color: var(--warm); letter-spacing: .08em; text-align: center; border-bottom: 2px solid var(--border); }
+.tt-header.riad { border-bottom-color: var(--riad); }
+.tt-header.oasis { border-bottom-color: var(--oasis); }
+.tt-header.qasr { border-bottom-color: var(--qasr); }
+.tt-time { background: var(--white); padding: 6px; font: 500 11px var(--serif); color: var(--warm); text-align: center; display: flex; align-items: center; justify-content: center; min-height: 48px; }
+.tt-cell { background: var(--white); padding: 4px 6px; min-height: 48px; display: flex; align-items: center; justify-content: center; }
+.tt-lesson { width: 100%; padding: 6px 8px; border-radius: 4px; text-align: center; font: 400 11px var(--sans); line-height: 1.4; cursor: default; transition: transform .1s; }
+.tt-lesson:hover { transform: scale(1.02); }
+.tt-lesson.group { background: rgba(74,138,154,.1); border-left: 3px solid var(--riad); color: var(--dark); }
+.tt-lesson.group-b { background: rgba(138,109,69,.1); border-left: 3px solid var(--oasis); color: var(--dark); }
+.tt-lesson.personal { background: rgba(122,90,138,.1); border-left: 3px solid var(--qasr); color: var(--dark); }
+.tt-lesson-name { font-weight: 500; margin-bottom: 1px; }
+.tt-lesson-meta { font: 300 9px var(--sans); color: var(--warm); }
+.tt-break { font: 300 8px var(--sans); color: rgba(138,133,128,.35); letter-spacing: .05em; }
+.tt-empty { font: 300 10px var(--sans); color: rgba(138,133,128,.25); }
+.legend-bar { display: flex; gap: 20px; margin-top: 16px; font: 300 11px var(--sans); color: var(--warm); align-items: center; flex-wrap: wrap; }
+.legend-swatch { display: inline-flex; align-items: center; gap: 6px; }
+.legend-swatch-box { width: 14px; height: 14px; border-radius: 3px; border-left: 3px solid; }
+.summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 24px; }
+.sum-card { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 16px; text-align: center; }
+.sum-value { font: 700 28px var(--serif); color: var(--gold); }
+.sum-label { font: 300 10px var(--sans); color: var(--warm); margin-top: 4px; }
+.notes { margin-top: 24px; background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; padding: 20px 24px; }
+.notes-title { font: 600 13px var(--serif); color: var(--gold); margin-bottom: 8px; letter-spacing: .5px; }
+.notes-list { font: 300 12px var(--sans); color: var(--dark); line-height: 2; }
+.footer { padding: 20px 40px; border-top: 1px solid var(--border); font: 300 10px var(--sans); color: var(--warm); display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <div><span class="logo">SUI</span><span class="logo-sub">PILATES STUDIO</span></div>
+    <span class="draft-badge">仮設定 DRAFT</span>
+  </div>
+  <div class="header-title">Studio Schedule — スタジオスケジュール</div>
+  <div class="header-meta">
+    営業時間 <b>9:00 – 23:00</b>（最終レッスン 22:00〜）｜レッスン <b>60分</b> ＋ インターバル <b>30分</b>（90分サイクル）｜
+    休館日 <b>毎月末日</b>
+  </div>
+</div>
+
+<!-- Room Cards -->
+<div class="rooms">
+  <div class="room-card riad">
+    <div class="room-name-ar">RIAD</div>
+    <div class="room-name-jp">リアド — グループスタジオ A</div>
+    <div class="room-concept">「組み合わせの可能性」— ハーフタワーとチェアで多彩なアプローチ</div>
+    <div class="room-spec">
+      定員 <b>6名</b>｜少人数・集中型<br>
+      ハーフタワー＋チェアを組み合わせた<br>
+      バリエーション豊かなグループレッスン
+    </div>
+    <div class="room-equip">設備: Half Cadillac (Tower) × 6台 ＋ Pilates Chair × 6台</div>
+  </div>
+  <div class="room-card oasis">
+    <div class="room-name-ar">OASIS</div>
+    <div class="room-name-jp">オアシス — グループスタジオ B</div>
+    <div class="room-concept">「流れるような動き」— ハーフタワーで深く身体と向き合う</div>
+    <div class="room-spec">
+      定員 <b>8名</b>｜レギュラークラス<br>
+      ハーフタワーマシンに特化した<br>
+      ベーシックからアドバンスまで
+    </div>
+    <div class="room-equip">設備: Half Cadillac (Tower) × 8台</div>
+  </div>
+  <div class="room-card qasr">
+    <div class="room-name-ar">QASR</div>
+    <div class="room-name-jp">カスル — パーソナルルーム</div>
+    <div class="room-concept">「あなただけの宮殿」— 経験豊かなプロ集団が一人ひとりのニーズに応える</div>
+    <div class="room-spec">
+      定員 <b>1名</b>（+トレーナー）<br>
+      完全プライベート空間<br>
+      顧客の目標・身体に合わせた完全オーダーメイド
+    </div>
+    <div class="room-equip">設備: Reformer / Half Cadillac / Chair / Barrel / Props — フル装備</div>
+  </div>
+</div>
+
+<!-- Info bar -->
+<div class="info-bar">
+  <div class="info-item"><div class="info-dot" style="background:var(--riad)"></div><span>RIAD（6名・Tower+Chair）</span></div>
+  <div class="info-item"><div class="info-dot" style="background:var(--oasis)"></div><span>OASIS（8名・Tower）</span></div>
+  <div class="info-item"><div class="info-dot" style="background:var(--qasr)"></div><span>QASR（パーソナル・フル装備）</span></div>
+  <div class="info-item" style="margin-left:auto;"><span class="info-label">1コマ:</span> 60分</div>
+  <div class="info-item"><span class="info-label">インターバル:</span> 30分</div>
+  <div class="info-item"><span class="info-label">サイクル:</span> 90分</div>
+</div>
+
+<!-- Schedule -->
+<div class="schedule-wrap">
+<div class="day-tabs" id="dayTabs"></div>
+<div id="timetable-container"></div>
+
+<div class="legend-bar">
+  <div class="legend-swatch"><div class="legend-swatch-box" style="background:rgba(74,138,154,.1);border-color:var(--riad);"></div>RIAD（Tower+Chair・6名）</div>
+  <div class="legend-swatch"><div class="legend-swatch-box" style="background:rgba(138,109,69,.1);border-color:var(--oasis);"></div>OASIS（Tower・8名）</div>
+  <div class="legend-swatch"><div class="legend-swatch-box" style="background:rgba(122,90,138,.1);border-color:var(--qasr);"></div>QASR（パーソナル）</div>
+  <div style="margin-left:auto;font:300 9px var(--sans);color:var(--warm);">グレー行 = 30分インターバル（清掃・準備・入替）</div>
+</div>
+
+<div class="summary" id="summary"></div>
+
+<div class="notes">
+  <div class="notes-title">運用ルール（仮）</div>
+  <div class="notes-list">
+    ・レッスン60分 ＋ インターバル30分 = 90分サイクル（清掃・マシンリセット・お客様入替）<br>
+    ・パーソナル（QASR）も同様に60分レッスン ＋ 30分インターバル<br>
+    ・1日の枠: 9:00開始 → 90分×9コマ = 最終22:00〜23:00 → 23:00完全退館<br>
+    ・グループレッスンは固定スケジュール（週次で同一時間帯）<br>
+    ・パーソナル（QASR）は全枠で予約可能（hacomonoで管理）<br>
+    ・休館日は毎月末日（月1日）— 設備メンテナンス・マシン点検・清掃<br>
+    ・インストラクター1名あたり1日最大4レッスン（インターバル含め6時間）<br>
+    ・RIAD: ハーフタワーとチェアを組み合わせた多彩なプログラム構成<br>
+    ・OASIS: ハーフタワーに特化し、基礎から応用まで段階的に深める<br>
+    ・QASR: 経験豊かなプロ集団が顧客のニーズ（姿勢改善・産後・スポーツ等）に完全対応
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+  <span>SUI PILATES STUDIO — Studio Schedule（仮設定）</span>
+  <span>更新日：2026年3月21日</span>
+</div>
+
+<script>
+// 90-minute cycle: 60min lesson + 30min interval
+// Time slots shown: lesson start times at 90-min intervals from 9:00
+// 9:00, 10:30, 12:00, 13:30, 15:00, 16:30, 18:00, 19:30, 21:00 = 9 slots
+// But we display every 30 minutes to show intervals
+
+const LESSONS = {
+  // RIAD lessons (Tower + Chair combo)
+  tc_basic:   { name: 'Tower+Chair ベーシック', sub: 'Basic Combination', room: 'riad' },
+  tc_flow:    { name: 'Tower+Chair フロー', sub: 'Flow Combination', room: 'riad' },
+  tc_core:    { name: 'Tower+Chair コア', sub: 'Core Intensive', room: 'riad' },
+  tc_body:    { name: 'Tower+Chair ボディメイク', sub: 'Body Sculpt', room: 'riad' },
+  tc_morning: { name: 'Tower+Chair モーニング', sub: 'Morning Session', room: 'riad' },
+  tc_advance: { name: 'Tower+Chair アドバンス', sub: 'Advanced Combo', room: 'riad' },
+  tc_relax:   { name: 'Tower+Chair リラックス', sub: 'Relax & Stretch', room: 'riad' },
+  // OASIS lessons (Tower only)
+  tw_basic:   { name: 'Tower ベーシック', sub: 'Basic Tower', room: 'oasis' },
+  tw_flow:    { name: 'Tower フロー', sub: 'Flow Tower', room: 'oasis' },
+  tw_core:    { name: 'Tower コア集中', sub: 'Core Focus', room: 'oasis' },
+  tw_posture: { name: 'Tower 姿勢改善', sub: 'Posture Alignment', room: 'oasis' },
+  tw_body:    { name: 'Tower ボディメイク', sub: 'Body Make', room: 'oasis' },
+  tw_morning: { name: 'Tower モーニング', sub: 'Morning Flow', room: 'oasis' },
+  tw_advance: { name: 'Tower アドバンス', sub: 'Advanced Tower', room: 'oasis' },
+  tw_stretch: { name: 'Tower ストレッチ', sub: 'Stretch & Release', room: 'oasis' },
+  // Personal
+  personal:   { name: 'パーソナル', sub: 'Private Session', room: 'qasr' },
+};
+
+// 90-minute cycle: 9 lesson slots per day
+// Each slot: [lessonStart, intervalStart]
+// 9:00-10:00(lesson) 10:00-10:30(interval)
+// 10:30-11:30(lesson) 11:30-12:00(interval)
+// ...
+// 22:00-23:00(lesson) = last slot, no interval needed
+
+const SLOT_TIMES = [
+  { start: '9:00',  end: '10:00', interval: '10:00–10:30' },
+  { start: '10:30', end: '11:30', interval: '11:30–12:00' },
+  { start: '12:00', end: '13:00', interval: '13:00–13:30' },
+  { start: '13:30', end: '14:30', interval: '14:30–15:00' },
+  { start: '15:00', end: '16:00', interval: '16:00–16:30' },
+  { start: '16:30', end: '17:30', interval: '17:30–18:00' },
+  { start: '18:00', end: '19:00', interval: '19:00–19:30' },
+  { start: '19:30', end: '20:30', interval: '20:30–21:00' },
+  { start: '21:00', end: '22:00', interval: '22:00–22:30' },
+  { start: '22:00', end: '23:00', interval: null },
+];
+// Actually 9:00 to 22:00 start = 10 possible slots with 90min cycle
+// Let's recalculate: 9:00, 10:30, 12:00, 13:30, 15:00, 16:30, 18:00, 19:30, 21:00, 22:30 would exceed 23:00
+// So max 9 slots: 9:00, 10:30, 12:00, 13:30, 15:00, 16:30, 18:00, 19:30, 21:00
+// Last lesson 21:00-22:00, done by 22:00. Cleanup by 22:30. Exit by 23:00. ✓
+
+const SLOTS = [
+  { start: '9:00',  end: '10:00', interval: '10:00 – 10:30' },
+  { start: '10:30', end: '11:30', interval: '11:30 – 12:00' },
+  { start: '12:00', end: '13:00', interval: '13:00 – 13:30' },
+  { start: '13:30', end: '14:30', interval: '14:30 – 15:00' },
+  { start: '15:00', end: '16:00', interval: '16:00 – 16:30' },
+  { start: '16:30', end: '17:30', interval: '17:30 – 18:00' },
+  { start: '18:00', end: '19:00', interval: '19:00 – 19:30' },
+  { start: '19:30', end: '20:30', interval: '20:30 – 21:00' },
+  { start: '21:00', end: '22:00', interval: null },
+];
+
+// Weekly schedule: 9 slots per room per day
+const WEEK = {
+  mon: {
+    riad:  ['tc_morning','tc_basic',null,'tc_core','tc_flow',null,'tc_body','tc_basic','tc_relax'],
+    oasis: ['tw_basic','tw_flow','tw_body',null,'tw_posture','tw_basic','tw_flow','tw_advance','tw_stretch'],
+    qasr:  ['personal','personal','personal','personal','personal','personal','personal','personal','personal'],
+  },
+  tue: {
+    riad:  ['tc_morning','tc_flow','tc_core',null,'tc_body','tc_advance',null,'tc_basic','tc_relax'],
+    oasis: ['tw_stretch','tw_basic','tw_flow','tw_core',null,'tw_body','tw_basic','tw_flow','tw_stretch'],
+    qasr:  ['personal','personal','personal','personal','personal','personal','personal','personal','personal'],
+  },
+  wed: {
+    riad:  ['tc_morning','tc_core',null,'tc_flow','tc_body','tc_basic',null,'tc_advance','tc_relax'],
+    oasis: ['tw_basic','tw_body','tw_flow',null,'tw_posture','tw_flow','tw_basic','tw_body','tw_stretch'],
+    qasr:  ['personal','personal','personal','personal','personal','personal','personal','personal','personal'],
+  },
+  thu: {
+    riad:  ['tc_morning','tc_basic','tc_flow',null,'tc_core','tc_body',null,'tc_flow','tc_relax'],
+    oasis: ['tw_flow','tw_core','tw_body','tw_basic',null,'tw_advance','tw_flow','tw_posture',null],
+    qasr:  ['personal','personal','personal','personal','personal','personal','personal','personal','personal'],
+  },
+  fri: {
+    riad:  ['tc_morning','tc_advance','tc_flow',null,'tc_body','tc_core','tc_basic',null,'tc_relax'],
+    oasis: ['tw_basic','tw_body','tw_flow','tw_posture',null,'tw_basic','tw_advance','tw_flow','tw_stretch'],
+    qasr:  ['personal','personal','personal','personal','personal','personal','personal','personal','personal'],
+  },
+  sat: {
+    riad:  ['tc_morning','tc_basic','tc_core','tc_flow','tc_body','tc_advance','tc_basic','tc_flow','tc_relax'],
+    oasis: ['tw_basic','tw_flow','tw_body','tw_posture','tw_basic','tw_flow','tw_advance','tw_body','tw_stretch'],
+    qasr:  ['personal','personal','personal','personal','personal','personal','personal','personal','personal'],
+  },
+  sun: {
+    riad:  ['tc_morning','tc_basic','tc_flow',null,'tc_core',null,'tc_relax',null,null],
+    oasis: ['tw_stretch','tw_basic','tw_flow','tw_body',null,'tw_posture',null,'tw_stretch',null],
+    qasr:  ['personal','personal','personal','personal','personal','personal','personal',null,null],
+  },
+};
+
+const DAY_LABELS = {
+  mon: { label: '月曜', sub: 'Monday' },
+  tue: { label: '火曜', sub: 'Tuesday' },
+  wed: { label: '水曜', sub: 'Wednesday' },
+  thu: { label: '木曜', sub: 'Thursday' },
+  fri: { label: '金曜', sub: 'Friday' },
+  sat: { label: '土曜', sub: 'Saturday' },
+  sun: { label: '日曜', sub: 'Sunday' },
+};
+
+let activeDay = 'mon';
+
+function renderTabs() {
+  document.getElementById('dayTabs').innerHTML = Object.entries(DAY_LABELS).map(([k, v]) =>
+    `<button class="day-tab ${k===activeDay?'active':''}" onclick="switchDay('${k}')">${v.label}<span class="day-sub">${v.sub}</span></button>`
+  ).join('');
+}
+
+function renderTimetable(dayKey) {
+  const day = WEEK[dayKey];
+  let html = '<div class="timetable">';
+  html += '<div class="tt-header">TIME</div>';
+  html += '<div class="tt-header riad">RIAD<br><span style="font-weight:300;font-size:9px">Tower+Chair・6名</span></div>';
+  html += '<div class="tt-header oasis">OASIS<br><span style="font-weight:300;font-size:9px">Tower・8名</span></div>';
+  html += '<div class="tt-header qasr">QASR<br><span style="font-weight:300;font-size:9px">パーソナル</span></div>';
+
+  for (let i = 0; i < SLOTS.length; i++) {
+    const slot = SLOTS[i];
+    // Lesson row
+    html += `<div class="tt-time">${slot.start}<br><span style="font:300 8px var(--sans);color:rgba(138,133,128,.5)">〜${slot.end}</span></div>`;
+    ['riad','oasis','qasr'].forEach(room => {
+      const key = day[room][i];
+      if (key && LESSONS[key]) {
+        const l = LESSONS[key];
+        const cls = room === 'qasr' ? 'personal' : (room === 'riad' ? 'group' : 'group-b');
+        html += `<div class="tt-cell"><div class="tt-lesson ${cls}"><div class="tt-lesson-name">${l.name}</div><div class="tt-lesson-meta">${l.sub}</div></div></div>`;
+      } else {
+        html += `<div class="tt-cell"><span class="tt-empty">—</span></div>`;
+      }
+    });
+    // Interval row (except last slot)
+    if (slot.interval) {
+      html += `<div class="tt-time" style="min-height:28px;background:rgba(196,149,106,.03);"><span class="tt-break">${slot.interval}</span></div>`;
+      for (let r = 0; r < 3; r++) {
+        html += `<div class="tt-cell" style="min-height:28px;background:rgba(196,149,106,.03);"><span class="tt-break">インターバル 30min</span></div>`;
+      }
+    }
+  }
+  html += '</div>';
+  document.getElementById('timetable-container').innerHTML = html;
+}
+
+function renderSummary() {
+  let totalGroup = 0, totalPersonal = 0, capRiad = 0, capOasis = 0;
+  Object.values(WEEK).forEach(day => {
+    day.riad.forEach(l => { if (l) { totalGroup++; capRiad += 6; } });
+    day.oasis.forEach(l => { if (l) { totalGroup++; capOasis += 8; } });
+    day.qasr.forEach(l => { if (l === 'personal') totalPersonal++; });
+  });
+  document.getElementById('summary').innerHTML = `
+    <div class="sum-card"><div class="sum-value">${totalGroup}</div><div class="sum-label">週間グループレッスン数</div></div>
+    <div class="sum-card"><div class="sum-value">${totalPersonal}</div><div class="sum-label">週間パーソナル枠数</div></div>
+    <div class="sum-card"><div class="sum-value">${capRiad + capOasis}</div><div class="sum-label">週間最大受入人数（グループ）</div></div>
+    <div class="sum-card"><div class="sum-value">${Math.round(totalGroup / 7)}</div><div class="sum-label">1日平均グループレッスン数</div></div>
+  `;
+}
+
+function switchDay(key) { activeDay = key; renderTabs(); renderTimetable(key); }
+renderTabs(); renderTimetable('mon'); renderSummary();
+</script>
+</body>
+</html>
