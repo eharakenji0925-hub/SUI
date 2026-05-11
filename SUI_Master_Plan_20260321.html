@@ -746,10 +746,10 @@ body {
 <div class="page-hd">
   <div class="page-hd-left">
     <div class="page-eyebrow">Project Master Plan</div>
-    <div class="page-title">7月グランドオープン<br>全体工程表</div>
+    <div class="page-title" id="page-title">7月グランドオープン<br>全体工程表</div>
     <div class="page-meta">
       SNS広告・モデル撮影・LP・LINE構築・hacomono連携 まで全工程を一元管理<br>
-      訴求の流れ：<b>価格訴求（6/1〜6/21）</b> → <b>体験募集（6/22〜6/30）</b> → <b>プレオープン体験会（7/1〜7/13）</b> → <b>グランドオープン（7/16）</b>
+      訴求の流れ：<span id="page-flow"><b>価格訴求（6/1〜6/21）</b> → <b>体験募集（6/22〜6/30）</b> → <b>プレオープン体験会（7/1〜7/13）</b> → <b>グランドオープン（7/16）</b></span>
     </div>
   </div>
 </div>
@@ -1196,6 +1196,26 @@ function dsCalc() {
     ganttMonths[2].innerHTML = dsFmtShort(p3s)+'〜<br><span style="font-weight:300;font-size:9px">体験募集</span>';
     ganttMonths[3].innerHTML = dsFmtShort(p4s)+'〜<br><span style="font-weight:300;font-size:9px">プレオープン体験会</span>';
     ganttMonths[4].innerHTML = dsFmtShort(goDate)+'〜<br><span style="font-weight:300;font-size:9px">グランドオープン</span>';
+  }
+
+  // update page header (top title & flow line)
+  const pageTitleEl = document.getElementById('page-title');
+  if (pageTitleEl) {
+    pageTitleEl.innerHTML = (goDate.getMonth()+1) + '月グランドオープン<br>全体工程表';
+  }
+  const pageFlowEl = document.getElementById('page-flow');
+  if (pageFlowEl) {
+    const p2s = dsAddDays(goDate, -45); // 価格訴求 開始
+    const p2e = dsAddDays(goDate, -25); // 価格訴求 終了
+    const p3s = dsAddDays(goDate, -24); // 体験募集 開始
+    const p3e = dsAddDays(goDate, -16); // 体験募集 終了
+    const p4s = dsAddDays(goDate, -15); // プレオープン 開始
+    const p4e = dsAddDays(goDate, -3);  // プレオープン 終了
+    pageFlowEl.innerHTML =
+      '<b>価格訴求（' + dsFmtShort(p2s) + '〜' + dsFmtShort(p2e) + '）</b> → ' +
+      '<b>体験募集（' + dsFmtShort(p3s) + '〜' + dsFmtShort(p3e) + '）</b> → ' +
+      '<b>プレオープン体験会（' + dsFmtShort(p4s) + '〜' + dsFmtShort(p4e) + '）</b> → ' +
+      '<b>グランドオープン（' + dsFmtShort(goDate) + '）</b>';
   }
 
   // render phase milestones
