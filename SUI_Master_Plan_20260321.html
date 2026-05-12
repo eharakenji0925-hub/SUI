@@ -645,7 +645,7 @@ body {
     <div class="header-date-block">
       <span class="header-date-label">グランドオープン日</span>
       <input type="date" id="header-go-input" value="2026-07-16" oninput="onHeaderDateChange(this.value)">
-      <span class="header-date-display" id="header-date-display">2025/7/16</span>
+      <span class="header-date-display" id="header-date-display">2026/7/16</span>
     </div>
     <div class="prog-summary">
       <span>全体進捗</span>
@@ -1064,7 +1064,7 @@ body {
     </div>
     <div>
       <div class="ds-input-label">現在の設定との差分</div>
-      <div class="ds-diff-value" id="ds-diff">基準日（2025/7/16）</div>
+      <div class="ds-diff-value" id="ds-diff">基準日（2026/7/16）</div>
     </div>
     <div id="ds-alert" style="display:none" class="ds-warn" style="margin:0"></div>
   </div>
@@ -1075,7 +1075,7 @@ body {
 
 <script>
 /* ── DATE SIMULATOR ── */
-const DS_BASE = new Date('2025-07-16');
+const DS_BASE = new Date('2026-07-16');
 
 // milestone definitions: { offset (days from GO), label, note, critical, badge, badgeColor, phaseKey }
 const DS_PHASES_DEF = [
@@ -1166,7 +1166,7 @@ function dsCalc() {
   const diffDays = Math.round(diffMs / 86400000);
   const diffEl = document.getElementById('ds-diff');
   if (diffDays === 0) {
-    diffEl.textContent = '基準日（2025/7/16）';
+    diffEl.textContent = '基準日（2026/7/16）';
     diffEl.className = 'ds-diff-value';
   } else {
     diffEl.textContent = (diffDays > 0 ? '+' : '') + diffDays + '日';
