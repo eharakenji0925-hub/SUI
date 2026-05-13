@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pilates studio SUI — 販促実行計画書 v2.1 (URL Sharable)</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#1a1a1a;--dark:#2d2d2d;--accent:#3d3225;--gold:#c9a96e;--gold-light:#d4b87a;
+  --cream:#f5f0e8;--white:#fff;--gray:#999;--light-gray:#ccc;--warm-gray:#8a8278;--muted:#888;
+  --pink:#c4737b;--green:#4a7c59;--blue:#3a5a8c;--navy:#2c3e6b;--red:#8b3a3a;--purple:#8a6aaa;--orange:#c47a5a;
+  --serif:'Cormorant Garamond','Noto Serif JP',serif;
+  --sans:'Noto Sans JP',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#111;font-family:var(--sans);overflow-x:hidden}
+.slide{width:960px;min-height:540px;margin:20px auto;position:relative;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.5);page-break-after:always}
+.slide.dark{background:var(--black);color:var(--white)}
+.slide.light{background:var(--cream);color:var(--black)}
+.top-bar{height:5px;background:var(--gold);width:100%}
+.section-badge{display:inline-block;background:var(--gold);color:var(--white);padding:6px 24px;font:600 11px var(--serif);letter-spacing:2px}
+.gold-line{width:120px;height:3px;background:var(--gold);margin:8px 0 16px}
+h1{font:700 28px var(--serif);letter-spacing:1px}
+h2{font:700 22px var(--serif);letter-spacing:.5px}
+h3{font:600 14px var(--serif);color:var(--gold)}
+.subtitle{font:300 11px var(--sans);color:var(--warm-gray);margin:4px 0 16px}
+.key-box{background:var(--dark);border-left:4px solid var(--gold);padding:10px 16px;margin-top:16px;font-size:11px;color:var(--light-gray);position:absolute;bottom:16px;left:30px;right:30px}
+.key-box b{color:var(--gold)}
+.light .key-box{background:var(--white);color:var(--dark);box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.pad{padding:30px 40px 60px}
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:1fr 1fr 1fr}
+.g4{grid-template-columns:1fr 1fr 1fr 1fr}
+.g6{grid-template-columns:repeat(6,1fr)}
+.card{background:var(--dark);padding:14px;border-radius:0;position:relative;overflow:hidden}
+.light .card{background:var(--white);box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.card-bar{position:absolute;top:0;left:0;width:100%;height:4px}
+.card-bar-left{position:absolute;top:0;left:0;width:4px;height:100%}
+.card h4{font:600 11px var(--serif);color:var(--gold);margin-bottom:6px}
+.card p{font:300 9px/1.6 var(--sans);color:var(--light-gray)}
+.light .card p{color:#555}
+.badge-pill{display:inline-block;padding:3px 14px;font-size:8px;font-weight:700;border-radius:0;color:var(--white);text-align:center}
+table{width:100%;border-collapse:collapse;font-size:9px}
+table th{background:var(--gold);color:var(--white);padding:8px;font-weight:600;text-align:center}
+table td{padding:7px 8px;border-bottom:1px solid rgba(0,0,0,.08);vertical-align:top}
+.light table td{border-color:rgba(0,0,0,.08)}
+.dark table td{border-color:rgba(255,255,255,.08);color:var(--light-gray)}
+table tr:nth-child(even){background:rgba(0,0,0,.02)}
+.dark table tr:nth-child(even){background:rgba(255,255,255,.03)}
+.highlight-box{padding:12px 18px;font-size:11px;font-weight:700}
+.toc-row{display:flex;align-items:center;background:var(--white);margin-bottom:5px;box-shadow:0 1px 4px rgba(0,0,0,.04);height:30px}
+.toc-num{width:44px;text-align:center;font:700 13px var(--serif);color:var(--gold)}
+.toc-sep{width:2px;height:18px;background:var(--gold);margin:0 8px}
+.toc-title{font:600 11px var(--serif);color:var(--black);flex:1}
+.toc-desc{font:300 9px var(--sans);color:var(--muted);width:340px;text-align:right;padding-right:12px}
+/* 5W block (いつ/どこで/誰が/何を/期限/準備) */
+.fivew-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:10px}
+.fivew{background:var(--dark);padding:10px 12px;position:relative;min-height:90px}
+.light .fivew{background:var(--white);box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.fivew-bar{position:absolute;top:0;left:0;width:4px;height:100%;background:var(--gold)}
+.fivew-label{font:700 9px var(--sans);color:var(--gold);letter-spacing:1px;margin-bottom:4px;display:flex;align-items:center;gap:4px}
+.fivew-label .num{display:inline-block;background:var(--gold);color:var(--white);width:14px;height:14px;text-align:center;line-height:14px;font-size:9px;font-weight:700}
+.fivew p{font:300 9px/1.5 var(--sans);color:var(--light-gray)}
+.light .fivew p{color:#444}
+.fivew p b{color:var(--gold);font-weight:600}
+.light .fivew p b{color:var(--accent)}
+/* price tag */
+.price-tag{display:inline-block;background:var(--gold);color:var(--white);padding:4px 14px;font:700 13px var(--serif);margin-left:12px}
+.price-tag .small{font-size:9px;font-weight:300;display:block;letter-spacing:1px}
+/* status pill */
+.status-confirmed{background:var(--green);color:var(--white);padding:2px 8px;font-size:8px;font-weight:700;letter-spacing:1px}
+.status-tbd{background:var(--orange);color:var(--white);padding:2px 8px;font-size:8px;font-weight:700;letter-spacing:1px}
+/* RACI */
+.raci-cell{text-align:center;font-weight:700;font-size:11px}
+.raci-R{color:var(--red)}
+.raci-A{color:var(--gold)}
+.raci-C{color:var(--blue)}
+.raci-I{color:var(--green)}
+/* Gantt */
+.gantt-row{display:flex;align-items:center;margin-bottom:3px;font-size:9px}
+.gantt-label{width:170px;flex-shrink:0;color:#555}
+.gantt-bar-area{flex:1;display:flex;gap:2px}
+.gantt-period{height:18px;font-size:7px;display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:600}
+.phase-header{display:flex;margin-bottom:8px;font-size:9px;font-weight:700;color:var(--white);text-align:center}
+.phase-header > div{flex:1;background:var(--dark);padding:6px 4px;margin:0 1px}
+/* Cost sim */
+.cost-card{background:var(--dark);padding:14px;position:relative;border-top:3px solid var(--gold)}
+.light .cost-card{background:var(--white);box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.cost-card .phase-label{font:600 10px var(--serif);color:var(--gold);letter-spacing:1px}
+.cost-card .phase-period{font:300 9px var(--sans);color:var(--warm-gray);margin-bottom:8px}
+.cost-line{display:flex;justify-content:space-between;padding:3px 0;font-size:9px;color:var(--light-gray);border-bottom:1px dashed rgba(255,255,255,.08)}
+.light .cost-line{color:#555;border-color:rgba(0,0,0,.06)}
+.cost-line.total{margin-top:6px;padding-top:8px;border-top:1px solid var(--gold);border-bottom:none;font-weight:700;color:var(--white);font-size:11px}
+.light .cost-line.total{color:var(--black)}
+.cost-line .amt{color:var(--gold);font-weight:600;font-family:var(--serif)}
+/* Checklist */
+.check-item{display:flex;align-items:flex-start;gap:10px;padding:7px 0;font-size:10px;border-bottom:1px solid rgba(0,0,0,.06)}
+.check-box{width:14px;height:14px;border:1.5px solid var(--gold);flex-shrink:0;margin-top:1px}
+.check-cat{font:700 8px var(--sans);color:var(--gold);letter-spacing:1px;width:80px;flex-shrink:0;margin-top:1px}
+.check-text{flex:1;color:#444;line-height:1.5}
+.check-text b{color:var(--black)}
+
+/* ── INTERACTIVE DATE CONTROLLER ── */
+#date-ctrl{position:fixed;top:0;left:0;right:0;z-index:9999;background:linear-gradient(180deg,#1a1a1a,#0d0d0d);color:#fff;padding:9px 24px;display:flex;align-items:center;gap:14px;box-shadow:0 4px 18px rgba(0,0,0,.6);font-family:'Noto Sans JP',sans-serif;border-bottom:2px solid var(--gold);flex-wrap:wrap}
+#date-ctrl .dc-label{font:700 9px 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:3px;white-space:nowrap}
+#date-ctrl input[type=date]{background:#fff;border:1px solid var(--gold);color:#1a1a1a;font:700 13px 'Cormorant Garamond',serif;padding:5px 9px;outline:none;cursor:pointer}
+#date-ctrl #go-display{font:700 12px 'Cormorant Garamond',serif;color:var(--gold);letter-spacing:.5px;min-width:180px}
+#date-ctrl button{background:transparent;border:1px solid var(--gold);color:var(--gold);padding:4px 12px;cursor:pointer;font:700 9px 'Noto Sans JP',sans-serif;letter-spacing:1px;transition:all .15s}
+#date-ctrl button:hover{background:var(--gold);color:#1a1a1a}
+#date-ctrl .dc-note{font:300 9px 'Noto Sans JP',sans-serif;color:#aaa;line-height:1.4;max-width:240px;margin-left:auto}
+#date-ctrl .copy-btn{background:#1a1a1a;border:1px solid var(--gold);color:var(--gold);padding:4px 11px;cursor:pointer;font:700 9px 'Noto Sans JP',sans-serif;letter-spacing:1.5px;transition:all .15s;display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+#date-ctrl .copy-btn:hover{background:var(--gold);color:#1a1a1a}
+#date-ctrl .copy-btn.copied{background:#4a7c59;color:#fff;border-color:#4a7c59}
+#share-toast{position:fixed;top:62px;left:50%;transform:translateX(-50%) translateY(-10px);background:#4a7c59;color:#fff;padding:11px 28px;font:700 11px 'Noto Sans JP',sans-serif;letter-spacing:2px;z-index:10000;opacity:0;transition:opacity .25s,transform .25s;pointer-events:none;box-shadow:0 6px 18px rgba(0,0,0,.4);border-left:3px solid var(--gold)}
+#share-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+#date-ctrl .scenario-badge{display:none;font:700 8px 'Noto Sans JP',sans-serif;color:var(--gold);letter-spacing:2px;padding:3px 9px;border:1px dashed var(--gold);background:rgba(201,169,110,.1);text-transform:uppercase;white-space:nowrap}
+#date-ctrl .scenario-badge.active{display:inline-block;animation:pulseBadge .8s ease-out}
+@keyframes pulseBadge{from{transform:scale(1.15);opacity:.6}to{transform:scale(1);opacity:1}}
+.dyn-date{color:inherit;font-weight:inherit}
+body{padding-top:50px}
+@media print{#date-ctrl{display:none!important}body{background:#fff;padding-top:0}.slide{box-shadow:none;margin:0;page-break-after:always}}
+</style>
+</head>
+<body>
+<div id="date-ctrl">
+<div class="dc-label">★★ GRAND OPEN</div>
+<input type="date" id="go-input" value="2026-07-16" min="2025-01-01" max="2030-12-31">
+<div id="go-display"></div>
+<div id="scenario-badge" class="scenario-badge">URLシナリオ</div>
+<button onclick="resetGoDate()">RESET</button>
+<button class="copy-btn" onclick="copyShareUrl()" id="copy-btn">📋 URLをコピー</button>
+<div class="dc-note">日付変更で全スライド連動更新／URLコピーで現シナリオをチーム共有</div>
+</div>
+<div id="share-toast">✓ URLをコピーしました — このURLを送れば同じ日付で開きます</div>
+
+
+<!-- ─────────────────────────────────────────────
+     SLIDE 1: TITLE
+───────────────────────────────────────────── -->
+<div class="slide dark" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:540px;background:linear-gradient(160deg,#111 0%,#1a1a1a 50%,#222 100%)">
+<div class="top-bar" style="position:absolute;top:0;left:0;right:0"></div>
+<div style="border:1px solid var(--gold);padding:46px 80px">
+<p style="font:300 12px var(--serif);color:var(--gold);letter-spacing:6px;margin-bottom:12px">pilates studio</p>
+<h1 style="font-size:54px;color:var(--white);letter-spacing:8px;margin-bottom:18px">SUI</h1>
+<div style="width:60px;height:2px;background:var(--gold);margin:0 auto 18px"></div>
+<p style="font:600 18px var(--serif);color:var(--white);letter-spacing:2px;margin-bottom:6px">販促実行計画書</p>
+<p style="font:300 10px var(--sans);color:var(--warm-gray);letter-spacing:2px">マーケ部 対応スコープ ／ 料金体系 ／ 実行スケジュール</p>
+</div>
+<div style="margin-top:26px;display:flex;gap:12px;justify-content:center">
+<div style="background:rgba(201,169,110,.18);border:1px solid var(--gold);padding:10px 22px;text-align:center;min-width:160px">
+<div style="font:600 8px var(--sans);color:var(--gold);letter-spacing:3px">★★ GRAND OPEN</div>
+<div style="font:700 17px var(--serif);color:var(--white);margin-top:3px;letter-spacing:1px"><span data-offset="0" data-fmt="ymd-wd" class="dyn-date">2026/7/16（木）</span></div>
+</div>
+<div style="background:rgba(201,169,110,.08);border:1px solid rgba(201,169,110,.55);padding:10px 22px;text-align:center;min-width:160px">
+<div style="font:600 8px var(--sans);color:var(--gold);letter-spacing:3px">★ PRE-OPEN 体験会</div>
+<div style="font:700 15px var(--serif);color:var(--white);margin-top:3px;letter-spacing:1px"><span data-offset-start="-15" data-offset-end="-3" data-fmt="range-full" class="dyn-date">7/1 〜 7/13</span>（13日間）</div>
+</div>
+<div style="background:rgba(58,90,140,.15);border:1px solid rgba(58,90,140,.6);padding:10px 22px;text-align:center;min-width:160px">
+<div style="font:600 8px var(--sans);color:#9bb8e0;letter-spacing:3px">▶ 販促 START</div>
+<div style="font:700 15px var(--serif);color:var(--white);margin-top:3px;letter-spacing:1px"><span data-offset="-45" class="dyn-date">6/1</span> 価格訴求 配信</div>
+</div>
+</div>
+<p style="font:300 11px var(--sans);color:var(--warm-gray);margin-top:22px">v2.1 ／ URL共有対応版（?go=YYYY-MM-DD でシナリオ共有可能）／マスター工程表との統合は別途</p>
+<p style="font:300 9px var(--sans);color:var(--muted);margin-top:6px">本資料は順次情報追加・更新される作業中ドキュメントです</p>
+</div>
+
+<!-- ─────────────────────────────────────────────
+     SLIDE 2: 本資料の位置づけ
+───────────────────────────────────────────── -->
+<div class="slide light">
+<div class="top-bar"></div>
+<div class="pad">
+<h1>本資料の位置づけ</h1>
+<div class="gold-line"></div>
+<div class="grid g2" style="gap:16px;margin-bottom:14px">
+<div class="card"><div class="card-bar-left" style="background:var(--gold)"></div><h4 style="margin-left:10px">既存「販促概要」との関係</h4><p style="margin-left:10px">『SUI_販促概要.html』で策定した戦略（ターゲット・媒体・導線）を踏襲。本資料はそれを「具体的な実行単位」に落とし込んだもの。</p></div>
+<div class="card"><div class="card-bar-left" style="background:var(--gold)"></div><h4 style="margin-left:10px">「マスター工程表」との関係</h4><p style="margin-left:10px">『SUI_Master_Plan』に存在する全カテゴリ（採用・施工・マシン等）のうち、<b>販促領域だけを抽出・詳細化</b>。最終的にマスターへ統合する前提。</p></div>
+<div class="card"><div class="card-bar-left" style="background:var(--gold)"></div><h4 style="margin-left:10px">本資料の独自価値</h4><p style="margin-left:10px">各施策に対し <b>「いつ・どこで・誰が・何を・期限・準備」</b> の6視点を明示。マーケ部の対応範囲と料金を契約交渉できる粒度で整理。</p></div>
+<div class="card"><div class="card-bar-left" style="background:var(--gold)"></div><h4 style="margin-left:10px">使い方</h4><p style="margin-left:10px">①各施策内容と料金を確認→②準備事項を着手→③スケジュールに沿って実行→④月次でKPIレビュー。今後の追加情報は本資料に追記。</p></div>
+</div>
+<h3 style="margin-bottom:8px">前提となるフェーズ定義（マスター準拠）</h3>
+<div style="display:flex;gap:4px;font-size:9px">
+<div style="flex:1;background:#8a6d45;color:#fff;padding:8px;text-align:center"><b>P1 準備期</b><br>〜<span data-offset="-46" class="dyn-date">5/31</span></div>
+<div style="flex:1;background:#a05030;color:#fff;padding:8px;text-align:center"><b>P2 価格訴求期</b><br><span data-offset-start="-45" data-offset-end="-25" class="dyn-date">6/1〜6/21</span></div>
+<div style="flex:1;background:#7a6020;color:#fff;padding:8px;text-align:center"><b>P3 体験募集期</b><br><span data-offset-start="-24" data-offset-end="-16" class="dyn-date">6/22〜6/30</span></div>
+<div style="flex:1;background:#4d6e8a;color:#fff;padding:8px;text-align:center"><b>P4 プレオープン</b><br><span data-offset-start="-15" data-offset-end="-3" class="dyn-date">7/1〜7/13</span></div>
+<div style="flex:1;background:#c9a96e;color:#fff;padding:8px;text-align:center"><b>P5 グランドオープン</b><br><span data-offset="0" class="dyn-date">7/16</span>〜</div>
+</div>
+<div class="key-box"><b>運用ルール：</b>追加情報・条件変更が発生したら本資料へ追記しバージョンを更新。月次レビュー時にマスターとの差分を確認</div>
+</div>
+</div>
+
+<!-- ─────────────────────────────────────────────
+     SLIDE 3: TOC
+───────────────────────────────────────────── -->
+<div class="slide light">
+<div class="top-bar"></div>
+<div class="pad">
+<h1>本資料の構成</h1>
+<div class="gold-line"></div>
+<div class="toc-row"><div class="toc-num">01</div><div class="toc-sep"></div><div class="toc-title">マーケ部 対応スコープ全体像</div><div class="toc-desc">6領域の責任範囲とマスター工程表との対応</div></div>
+<div class="toc-row"><div class="toc-num">02</div><div class="toc-sep"></div><div class="toc-title">料金体系 一覧表</div><div class="toc-desc">全施策の料金条件・適用ルール</div></div>
+<div class="toc-row"><div class="toc-num">03</div><div class="toc-sep"></div><div class="toc-title">Meta広告 実行設計</div><div class="toc-desc">5W＋準備事項・運用料率10%／15%</div></div>
+<div class="toc-row"><div class="toc-num">04</div><div class="toc-sep"></div><div class="toc-title">Google広告 実行設計</div><div class="toc-desc">5W＋準備事項・運用料率10%／15%</div></div>
+<div class="toc-row"><div class="toc-num">05</div><div class="toc-sep"></div><div class="toc-title">SEO対策 実行設計</div><div class="toc-desc">MYメディカル連携／全マーケ部の2パターン</div></div>
+<div class="toc-row"><div class="toc-num">06</div><div class="toc-sep"></div><div class="toc-title">MEO対策 実行設計</div><div class="toc-desc">他領域受託時：費用サービス対応</div></div>
+<div class="toc-row"><div class="toc-num">07</div><div class="toc-sep"></div><div class="toc-title">インフルエンサー集客（要確認）</div><div class="toc-desc">座組要確認・対応可否の整理</div></div>
+<div class="toc-row"><div class="toc-num">08</div><div class="toc-sep"></div><div class="toc-title">SNS運用 実行設計</div><div class="toc-desc">縦動画3万円／本・静止画2万円／投稿</div></div>
+<div class="toc-row"><div class="toc-num">09</div><div class="toc-sep"></div><div class="toc-title">フェーズ別 実行スケジュール</div><div class="toc-desc">P1〜P5ガントチャート</div></div>
+<div class="toc-row"><div class="toc-num">10</div><div class="toc-sep"></div><div class="toc-title">役割分担マトリックス（RACI）</div><div class="toc-desc">代表・マーケ部・制作・カメラマンの責任分解</div></div>
+<div class="toc-row"><div class="toc-num">11</div><div class="toc-sep"></div><div class="toc-title">月額コスト試算（フェーズ別）</div><div class="toc-desc">4シナリオの想定費用シミュレーション</div></div>
+<div class="toc-row"><div class="toc-num">12</div><div class="toc-sep"></div><div class="toc-title">着手前 準備チェックリスト</div><div class="toc-desc">クライアント側で必要な意思決定・素材</div></div>
+<div class="toc-row"><div class="toc-num">13</div><div class="toc-sep"></div><div class="toc-title">確認事項・留意事項</div><div class="toc-desc">合意・確認待ち項目の整理</div></div>
+<div class="toc-row"><div class="toc-num">14</div><div class="toc-sep"></div><div class="toc-title">マスター工程表 統合方針</div><div class="toc-desc">本資料の項目とマスタータスクIDの紐付け</div></div>
+</div>
+</div>
+
+<!-- ─────────────────────────────────────────────
+     SLIDE 4: マーケ部 対応スコープ全体像
+───────────────────────────────────────────── -->
+<div class="slide dark">
+<div class="top-bar"></div>
+<div class="pad">
+<span class="section-badge">SECTION 01</span>
+<h2 style="display:inline;margin-left:16px;color:var(--white)">マーケ部 対応スコープ全体像</h2>
+<div class="gold-line"></div>
+<p class="subtitle">マーケ部が責任を持つ6つの実行領域。マスター工程表内の販促タスクを横断的にカバー</p>
+<div class="grid g3" style="margin-bottom:14px">
+<div class="card" style="text-align:center"><div class="card-bar" style="background:var(--blue)"></div>
+<p style="color:var(--gold);font-size:9px;font-weight:700;margin-top:8px;letter-spacing:1px">領域 01</p>
+<h4 style="font-size:14px;color:var(--white);margin:6px 0">Meta広告</h4>
+<p>Instagram／Facebook広告の<br>戦略設計・配信・運用最適化</p>
+<p style="color:var(--gold);font-size:9px;margin-top:6px;font-weight:600">運用料率：10% or 15%</p></div>
+<div class="card" style="text-align:center"><div class="card-bar" style="background:var(--green)"></div>
+<p style="color:var(--gold);font-size:9px;font-weight:700;margin-top:8px;letter-spacing:1px">領域 02</p>
+<h4 style="font-size:14px;color:var(--white);margin:6px 0">Google広告</h4>
+<p>検索・ディスプレイ・YouTube<br>リスティング・リマケ運用</p>
+<p style="color:var(--gold);font-size:9px;margin-top:6px;font-weight:600">運用料率：10% or 15%</p></div>
+<div class="card" style="text-align:center"><div class="card-bar" style="background:var(--purple)"></div>
+<p style="color:var(--gold);font-size:9px;font-weight:700;margin-top:8px;letter-spacing:1px">領域 03</p>
+<h4 style="font-size:14px;color:var(--white);margin:6px 0">SEO対策</h4>
+<p>ディレクション・内部対策<br>コンテンツSEO設計</p>
+<p style="color:var(--gold);font-size:9px;margin-top:6px;font-weight:600">月額：10万円〜</p></div>
+</div>
+<div class="grid g3">
+<div class="card" style="text-align:center"><div class="card-bar" style="background:var(--orange)"></div>
+<p style="color:var(--gold);font-size:9px;font-weight:700;margin-top:8px;letter-spacing:1px">領域 04</p>
+<h4 style="font-size:14px;color:var(--white);margin:6px 0">MEO対策</h4>
+<p>Googleビジネスプロフィール<br>口コミ・投稿運用</p>
+<p style="color:var(--gold);font-size:9px;margin-top:6px;font-weight:600">月額：0円（条件付）</p></div>
+<div class="card" style="text-align:center"><div class="card-bar" style="background:var(--pink)"></div>
+<p style="color:var(--gold);font-size:9px;font-weight:700;margin-top:8px;letter-spacing:1px">領域 05</p>
+<h4 style="font-size:14px;color:var(--white);margin:6px 0">インフルエンサー集客</h4>
+<p>選定・交渉・投稿管理<br><span style="color:var(--orange)">※ 座組要確認</span></p>
+<p style="color:var(--gold);font-size:9px;margin-top:6px;font-weight:600">料金：要確認</p></div>
+<div class="card" style="text-align:center"><div class="card-bar" style="background:var(--gold)"></div>
+<p style="color:var(--gold);font-size:9px;font-weight:700;margin-top:8px;letter-spacing:1px">領域 06</p>
+<h4 style="font-size:14px;color:var(--white);margin:6px 0">SNS運用</h4>
+<p>縦動画・静止画の<br>企画・撮影・編集・投稿</p>
+<p style="color:var(--gold);font-size:9px;margin-top:6px;font-weight:600">縦動画3万 ／ 静止画2万</p></div>
+</div>
+<div class="key-box"><b>マスター工程表との対応：</b>本6領域はマスター内 <b>creative ／ web ／ line ／ sns ／ google ／ offline</b> カテゴリの一部を実行担当。HP・LP制作・LINE構築は別途確認（本契約スコープ外の可能性）</div>
+</div>
+</div>
+
+<!-- ─────────────────────────────────────────────
+     SLIDE 5: 料金体系一覧表
+───────────────────────────────────────────── -->
+<div class="slide light">
+<div class="top-bar"></div>
+<div class="pad">
+<span class="section-badge">SECTION 02</span>
+<h2 style="display:inline;margin-left:16px">料金体系 一覧表</h2>
+<div class="gold-line"></div>
+<table style="margin-top:6px">
+<tr><th style="width:14%">施策</th><th style="width:22%">料金</th><th style="width:18%">条件</th><th style="width:46%">適用ルール・備考</th></tr>
+<tr>
+<td style="font-weight:700;color:var(--blue)">Meta広告</td>
+<td><b>運用料率 10%</b><br>運用料率 15%</td>
+<td>月間広告費 ≧300万円<br>月間広告費 ＜300万円</td>
+<td>運用料 = 配信額 × 料率。クリエイティブ制作費はSNS運用枠で別途精算</td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--green)">Google広告</td>
+<td><b>運用料率 10%</b><br>運用料率 15%</td>
+<td>月間広告費 ≧300万円<br>月間広告費 ＜300万円</td>
+<td>検索・ディスプレイ・YouTube・リマケを含む。広告費はクライアント直接決済</td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--purple)" rowspan="2">SEO対策</td>
+<td><b>月額 10万円</b></td>
+<td>MYメディカル連携パターン</td>
+<td>ディレクション・対策はマーケ部／ライティングはMYメディカル雇用ライターが対応</td>
+</tr>
+<tr>
+<td><b>月額 10万円 ＋ 文字単価 3.9円</b></td>
+<td>全マーケ部パターン</td>
+<td>ディレクション＋ライティングともにマーケ部対応。文字数は別途相談</td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--orange)">MEO対策</td>
+<td><b>月額 0円（サービス）</b></td>
+<td>他領域受託が前提</td>
+<td>他の領域（広告・SEO・SNS等）を受託している場合に限りサービスとして対応</td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--pink)">インフルエンサー</td>
+<td><span class="status-tbd">確認中</span></td>
+<td>WEBの座組依存</td>
+<td>マーケ部で対応可能なケースあり。WEB制作・運用の座組を確認した上で対応可否を判断</td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--gold)" rowspan="2">SNS運用</td>
+<td><b>3万円／本</b></td>
+<td>縦動画 1本</td>
+<td>Instagramリール／TikTok等。企画・撮影・編集・投稿一式。撮影回数は集約推奨</td>
+</tr>
+<tr>
+<td><b>2万円／投稿</b></td>
+<td>静止画 1投稿</td>
+<td>Instagramフィード／ストーリーズ。クリエイティブ制作＋投稿作業を含む</td>
+</tr>
+</table>
+<div class="key-box"><b>留意点：</b>広告費（媒体費）と運用料は別。広告費は原則クライアント直接決済。本表はマーケ部報酬の整理であり、媒体への支払いは別途</div>
+</div>
+</div>
+
+<!-- ─────────────────────────────────────────────
+     SLIDE 6: Meta広告 実行設計
+───────────────────────────────────────────── -->
+<div class="slide dark">
+<div class="top-bar"></div>
+<div class="pad">
+<span class="section-badge">SECTION 03</span>
+<h2 style="display:inline;margin-left:16px;color:var(--white)">Meta広告 実行設計</h2>
+<span class="price-tag">10% / 15%<span class="small">運用料率</span></span>
+<div class="gold-line"></div>
+<p class="subtitle">Instagram／Facebook広告でメインターゲット女性30-45歳にリーチ。価格訴求→体験訴求の2段階で配信</p>
+
+<div class="fivew-grid">
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">1</span>いつ（タイミング）</div><p><b>P1 準備期：</b>アカウント整備・ティザー配信<br><b>P2 <span data-offset-start="-45" data-offset-end="-25" class="dyn-date">6/1〜6/21</span>：</b>価格訴求本格配信<br><b>P3 <span data-offset="-24" class="dyn-date">6/22</span>〜：</b>体験訴求に切替<br><b>P4-P5：</b>継続運用＋PDCA</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">2</span>どこで（媒体）</div><p>・<b>Instagram</b>（フィード／リール／ストーリーズ広告）<br>・<b>Facebook</b>（フィード／ストーリーズ）<br>・Audience Network<br>・Advantage+ キャンペーン</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">3</span>誰が（責任者）</div><p>・<b>マーケ部：</b>戦略設計・配信実行・最適化<br>・<b>制作チーム：</b>クリエイティブ制作（SNS運用枠）<br>・<b>代表：</b>方針・予算・クリエイティブ承認</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">4</span>何を（タスク）</div><p>① 広告アカウント設計・ピクセル設定<br>② オーディエンス設計（目的別×類似）<br>③ クリエイティブ運用・A/Bテスト<br>④ 入札・予算最適化／週次PDCA<br>⑤ 月次レポート・改善提案</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">5</span>期限（マイルストーン）</div><p>・<b><span data-offset="-57" class="dyn-date">5/20</span>：</b>広告アカウント・計測設定完了<br>・<b><span data-offset="-52" class="dyn-date">5/25</span>：</b>クリエイティブ初稿納品<br>・<b><span data-offset="-45" class="dyn-date">6/1</span>：</b>価格訴求 配信開始<br>・<b><span data-offset="-24" class="dyn-date">6/22</span>：</b>体験訴求 LP切替＆クリエ差替</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">6</span>準備（クライアント側）</div><p>・Meta Business Manager 権限付与<br>・支払い用法人カード／請求書設定<br>・特商法表記・プライバシーポリシー<br>・LP／LINE URL 確定<br>・撮影素材（モデル・ロケ）の承認</p></div>
+</div>
+<div class="key-box"><b>運用料金例：</b>月50万配信→7.5万（15%）／月100万→15万（15%）／月300万→30万（10%）／月500万→50万（10%）</div>
+</div>
+</div>
+
+<!-- ─────────────────────────────────────────────
+     SLIDE 7: Google広告 実行設計
+───────────────────────────────────────────── -->
+<div class="slide dark">
+<div class="top-bar"></div>
+<div class="pad">
+<span class="section-badge">SECTION 04</span>
+<h2 style="display:inline;margin-left:16px;color:var(--white)">Google広告 実行設計</h2>
+<span class="price-tag">10% / 15%<span class="small">運用料率</span></span>
+<div class="gold-line"></div>
+<p class="subtitle">検索広告でニーズ顕在層を獲得＋リマケで再訪問者を回収。ティザー期はディスプレイ中心、本番は検索＋リマケ中心</p>
+
+<div class="fivew-grid">
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">1</span>いつ（タイミング）</div><p><b>P1 準備期：</b>ディスプレイ・ティザー<br><b>P2 <span data-offset="-45" class="dyn-date">6/1</span>〜：</b>検索広告 開始（価格訴求KW）<br><b>P3 <span data-offset="-24" class="dyn-date">6/22</span>〜：</b>体験訴求KWに変更<br><b>P4 <span data-offset="-15" class="dyn-date">7/1</span>〜：</b>リマケ強化・YouTube追加</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">2</span>どこで（媒体）</div><p>・<b>Google検索</b>（リスティング）<br>・<b>ディスプレイネットワーク</b><br>・<b>YouTube動画広告</b><br>・<b>P-MAX</b>（オープン後）<br>・<b>リマーケティング</b></p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">3</span>誰が（責任者）</div><p>・<b>マーケ部：</b>KW設計・入札・配信最適化<br>・<b>制作チーム：</b>バナー・動画素材<br>・<b>代表：</b>KW承認・予算承認</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">4</span>何を（タスク）</div><p>① Google広告アカウント・計測設定<br>② KW設計（目的別・地域絞り）<br>③ 入札戦略・予算配分・除外設定<br>④ コンバージョン計測・CPA最適化<br>⑤ 月次レポート・改善提案</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">5</span>期限（マイルストーン）</div><p>・<b><span data-offset="-57" class="dyn-date">5/20</span>：</b>アカウント・GTM・CV設定完了<br>・<b><span data-offset="-50" class="dyn-date">5/27</span>：</b>ディスプレイ ティザー配信<br>・<b><span data-offset="-45" class="dyn-date">6/1</span>：</b>検索広告 本配信開始<br>・<b><span data-offset="-24" class="dyn-date">6/22</span>：</b>体験KWへ切替<br>・<b><span data-offset="-15" class="dyn-date">7/1</span>：</b>リマケ・YouTube追加</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">6</span>準備（クライアント側）</div><p>・Google広告アカウント発行＋管理者権限<br>・GA4／GTM 導入・権限付与<br>・支払い設定（カード or 請求書）<br>・対策KW候補リスト（代表ヒアリング）<br>・LP・電話番号</p></div>
+</div>
+<div class="key-box"><b>運用料金例：</b>月50万配信→7.5万（15%）／月100万→15万（15%）／月300万→30万（10%）／月500万→50万（10%）</div>
+</div>
+</div>
+
+<!-- ─────────────────────────────────────────────
+     SLIDE 8: SEO対策 実行設計
+───────────────────────────────────────────── -->
+<div class="slide light">
+<div class="top-bar"></div>
+<div class="pad">
+<span class="section-badge">SECTION 05</span>
+<h2 style="display:inline;margin-left:16px">SEO対策 実行設計</h2>
+<span class="price-tag">10万円〜/月<span class="small">月額固定</span></span>
+<div class="gold-line"></div>
+<p class="subtitle">HP公開と同時にスタート。検索流入を中長期で増やし、広告依存度を下げる。ライティング体制で2パターン</p>
+
+<div class="grid g2" style="gap:14px;margin-bottom:14px">
+<div class="card" style="border-top:3px solid var(--purple)"><h4 style="color:var(--purple);font-size:13px">パターンA：MYメディカル連携</h4>
+<p style="margin:6px 0"><b>月額 10万円</b>（固定）</p>
+<p>・ディレクション・対策：<b>マーケ部</b><br>・ライティング：<b>MYメディカル雇用ライター</b><br>・既存ライター活用で初期コスト抑制<br>・医療系コンテンツの専門性を担保しやすい</p></div>
+<div class="card" style="border-top:3px solid var(--accent)"><h4 style="color:var(--accent);font-size:13px">パターンB：全マーケ部対応</h4>
+<p style="margin:6px 0"><b>月額 10万円 ＋ 文字単価 3.9円</b></p>
+<p>・ディレクション・対策：<b>マーケ部</b><br>・ライティング：<b>マーケ部</b><br>・文字数は別途相談（KW・記事数による）<br>・例：月8記事×3,000字＝月93,600円＋10万＝19.36万</p></div>
+</div>
+
+<div class="fivew-grid">
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">1</span>いつ</div><p><b>P1 準備期：</b>KW設計・サイト構造設計<br><b>P2 価格訴求期〜：</b>記事公開開始<br><b>継続：</b>月次でPDCA</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">2</span>どこで</div><p>・公式HP（ブログ／コラム）<br>・LP内コンテンツ<br>・Googleビジネス投稿への連動</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">3</span>誰が</div><p>・マーケ部（ディレクション）<br>・MYメディカルライター or マーケ部ライター<br>・代表（KW承認）</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">4</span>何を</div><p>① 対策KW選定・優先順位設計<br>② サイト構造・内部リンク設計<br>③ 月次コンテンツ計画＋ライティング指示<br>④ 内部対策（タイトル・メタ・構造化）<br>⑤ Search Console 分析・PDCA</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">5</span>期限</div><p>・<b><span data-offset="-62" class="dyn-date">5/15</span>：</b>KWマップ・コンテンツ計画完成<br>・<b><span data-offset="-46" class="dyn-date">5/31</span>：</b>HP内部対策実装完了<br>・<b>P2（<span data-offset="-45" class="dyn-date">6/1</span>〜）：</b>初回記事4-8本公開<br>・以降月次更新</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">6</span>準備</div><p>・HP管理権限・CMS編集権限<br>・GA4 / Search Console 権限<br>・対策KW候補（代表ヒアリング）<br>・ペルソナ・訴求軸の確定<br>・パターン選択（A or B）の合意</p></div>
+</div>
+<div class="key-box"><b>選択ポイント：</b>初期は記事量より質。MYメディカル既存ライター活用（パターンA）で開始し、需要拡大時にBへ拡張するのが現実的</div>
+</div>
+</div>
+
+<!-- ─────────────────────────────────────────────
+     SLIDE 9: MEO対策 実行設計
+───────────────────────────────────────────── -->
+<div class="slide light">
+<div class="top-bar"></div>
+<div class="pad">
+<span class="section-badge">SECTION 06</span>
+<h2 style="display:inline;margin-left:16px">MEO対策 実行設計</h2>
+<span class="price-tag" style="background:var(--green)">0円/月<span class="small">サービス対応</span></span>
+<div class="gold-line"></div>
+<p class="subtitle">Googleビジネスプロフィールを最適化し、地域検索（例「ピラティス スタジオ ○○」）で上位表示を狙う</p>
+
+<div class="highlight-box" style="background:var(--green);color:var(--white);margin-bottom:14px">
+✓ 適用条件：マーケ部に他の領域（Meta／Google広告／SEO／SNS等）を任せていただける場合、MEO対策は<b>サービス料金（0円）</b>で対応
+</div>
+
+<div class="fivew-grid">
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">1</span>いつ</div><p><b>P1 準備期：</b>GBP開設・初期設定<br><b>P2 価格訴求期〜：</b>写真投稿・口コミ施策開始<br><b>P4-P5：</b>来店者の口コミ獲得加速</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">2</span>どこで</div><p>・<b>Googleビジネスプロフィール（GBP）</b><br>・Googleマップ<br>・Google検索ローカルパック</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">3</span>誰が</div><p>・マーケ部（設定・運用・分析）<br>・代表（口コミ依頼の店舗内オペレーション）<br>・アルバイト（来店者への口コミ依頼）</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">4</span>何を</div><p>① GBP開設・店舗情報最適化<br>② 写真・動画の継続投稿（週1-2回）<br>③ 投稿機能でキャンペーン告知<br>④ 口コミへの返信運用<br>⑤ Q&A整備・MEO順位モニタリング</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">5</span>期限</div><p>・<b><span data-offset="-62" class="dyn-date">5/15</span>：</b>GBP開設・基本情報入力完了<br>・<b><span data-offset="-45" class="dyn-date">6/1</span>：</b>写真20点以上掲載<br>・<b><span data-offset="-15" class="dyn-date">7/1</span>：</b>口コミ獲得フロー稼働<br>・GO+<span data-offset="60" data-fmt="raw" class="dyn-date">約2ヶ月</span> 目処：口コミ30件目標</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">6</span>準備</div><p>・店舗情報（住所・電話・営業時間）確定<br>・スタジオ内外観の写真素材<br>・GBP管理権限の付与<br>・口コミ依頼用QRコード設置場所<br>・口コミ依頼スクリプト・タイミング</p></div>
+</div>
+<div class="key-box"><b>注意：</b>MEOは時間がかかる施策。早期にGBP開設・写真充実・口コミ蓄積を始めることでオープン時に検索上位が取りやすくなる</div>
+</div>
+</div>
+
+<!-- ─────────────────────────────────────────────
+     SLIDE 10: インフルエンサー集客（要確認）
+───────────────────────────────────────────── -->
+<div class="slide light">
+<div class="top-bar"></div>
+<div class="pad">
+<span class="section-badge">SECTION 07</span>
+<h2 style="display:inline;margin-left:16px">インフルエンサー集客</h2>
+<span class="price-tag" style="background:var(--orange)">要確認<span class="small">対応可否確認中</span></span>
+<div class="gold-line"></div>
+<p class="subtitle">地域密着型の女性インフルエンサー（30-45歳ターゲット層に近い）の起用で認知拡大＋体験予約獲得</p>
+
+<div class="highlight-box" style="background:var(--orange);color:var(--white);margin-bottom:14px">
+⚠ 現時点ステータス：マーケ部で対応可能なケースあり。<b>WEB（HP・LP・LINE）の座組がどうなっているかを確認した上で</b>対応可否を判断する
+</div>
+
+<h3 style="margin-bottom:10px">確認が必要な項目</h3>
+<div class="grid g3" style="margin-bottom:14px">
+<div class="card"><div class="card-bar-left" style="background:var(--orange)"></div><h4 style="margin-left:10px">WEB制作の座組</h4><p style="margin-left:10px">HP・LP・LINEの制作担当は誰か？インフルエンサーから流入したリンク先（LP）の編集権限・修正速度を確認</p></div>
+<div class="card"><div class="card-bar-left" style="background:var(--orange)"></div><h4 style="margin-left:10px">計測の連携可否</h4><p style="margin-left:10px">UTMパラメータの設計・付与権限／LINE登録の流入元タグ管理。流入計測がマーケ部で完結できる体制か</p></div>
+<div class="card"><div class="card-bar-left" style="background:var(--orange)"></div><h4 style="margin-left:10px">予算範囲・対応範囲</h4><p style="margin-left:10px">インフルエンサーへの報酬・ギフティング予算・契約形態（PR表記・二次利用権）の合意範囲を確認</p></div>
+</div>
+
+<h3 style="margin-bottom:8px">対応可能な場合の想定スコープ（参考）</h3>
+<table>
+<tr><th>項目</th><th>内容</th><th>備考</th></tr>
+<tr><td style="width:20%">候補リサーチ</td><td>地域密着・健康／美容／ライフスタイル系30-45歳女性</td><td>フォロワー1万〜5万のマイクロ層中心</td></tr>
+<tr><td>交渉・契約</td><td>報酬条件・PR表記・二次利用権・納期</td><td>契約書ひな形は要相談</td></tr>
+<tr><td>投稿企画</td><td>体験レッスン参加→リール／フィード投稿</td><td>P3-P4（6/22〜）の体験訴求期に集中</td></tr>
+<tr><td>計測・効果検証</td><td>UTM付きLP誘導・体験予約数・LINE登録数</td><td>計測がマーケ部で実施できることが前提</td></tr>
+</table>
+<div class="key-box"><b>次のアクション：</b>① WEB制作担当・編集権限の整理 → ② マーケ部での対応可否判断 → ③ 可の場合は別途料金提示</div>
+</div>
+</div>
+
+<!-- ─────────────────────────────────────────────
+     SLIDE 11: SNS運用 実行設計
+───────────────────────────────────────────── -->
+<div class="slide dark">
+<div class="top-bar"></div>
+<div class="pad">
+<span class="section-badge">SECTION 08</span>
+<h2 style="display:inline;margin-left:16px;color:var(--white)">SNS運用 実行設計</h2>
+<span class="price-tag">3万 / 2万<span class="small">縦動画／静止画 単価</span></span>
+<div class="gold-line"></div>
+<p class="subtitle">Instagramを中心にスタジオの世界観を発信。広告クリエイティブの母艦としても機能（広告に転用可能）</p>
+
+<div class="grid g2" style="gap:14px;margin-bottom:12px">
+<div class="card"><h4 style="font-size:13px">縦動画（リール／TikTok）</h4>
+<p style="margin-top:4px"><span style="color:var(--gold);font-weight:700">3万円／本</span> ／ 企画・撮影・編集・投稿込み</p>
+<p style="margin-top:4px">想定本数の目安：<br>・立ち上げ最小：月2本（6万）<br>・スタンダード：月4本（12万）<br>・拡大期：月6-8本（18-24万）</p></div>
+<div class="card"><h4 style="font-size:13px">静止画（フィード／ストーリーズ）</h4>
+<p style="margin-top:4px"><span style="color:var(--gold);font-weight:700">2万円／投稿</span> ／ クリエイティブ制作＋投稿作業込み</p>
+<p style="margin-top:4px">想定本数の目安：<br>・立ち上げ最小：月4投稿（8万）<br>・スタンダード：月8投稿（16万）<br>・拡大期：月12-16投稿（24-32万）</p></div>
+</div>
+
+<div class="fivew-grid">
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">1</span>いつ</div><p><b>P1 準備期：</b>アカウント開設・初期投稿<br><b>P2 <span data-offset="-45" class="dyn-date">6/1</span>〜：</b>本格運用開始<br><b>継続：</b>毎月企画→撮影→編集→投稿</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">2</span>どこで</div><p>・<b>Instagram</b>（リール／フィード／ストーリーズ）<br>・<b>TikTok</b>（縦動画転用）<br>・YouTube Shorts（任意・転用）</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">3</span>誰が</div><p>・<b>マーケ部：</b>企画・編集・投稿・分析<br>・<b>カメラマン：</b>撮影日対応<br>・<b>インストラクター／代表：</b>出演・監修</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">4</span>何を</div><p>① 月次コンテンツ企画・絵コンテ作成<br>② 撮影日のディレクション・撮影<br>③ 編集（テロップ・BGM・色補正）<br>④ 投稿・ハッシュタグ運用<br>⑤ コメント返信・インサイト分析</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">5</span>期限</div><p>・<b><span data-offset="-62" class="dyn-date">5/15</span>：</b>ブランドガイドライン確定<br>・<b><span data-offset="-57" class="dyn-date">5/20</span>：</b>初回撮影日<br>・<b><span data-offset="-52" class="dyn-date">5/25</span>：</b>アカウント本格稼働開始<br>・<b>月初：</b>翌月企画提出</p></div>
+<div class="fivew"><div class="fivew-bar"></div><div class="fivew-label"><span class="num">6</span>準備</div><p>・出演者の肖像使用同意書<br>・撮影日の確保（スタジオ・モデル）<br>・スタジオウェア・備品<br>・トーン＆マナー指針<br>・本数の月次合意</p></div>
+</div>
+<div class="key-box"><b>運用最適化：</b>1日の撮影で動画4本＋静止画8カット程度をまとめ撮りすると、撮影効率が高く単価圧縮できる</div>
+</div>
+</div>
+
+<!-- ─────────────────────────────────────────────
+     SLIDE 12: 実行スケジュール（オープン日逆算カレンダー）
+───────────────────────────────────────────── -->
+<div class="slide light">
+<div class="top-bar"></div>
+<div class="pad">
+<span class="section-badge">SECTION 09</span>
+<h2 style="display:inline;margin-left:16px">実行スケジュール（オープン日逆算カレンダー）</h2>
+<div class="gold-line"></div>
+
+<!-- OPEN DATE BANNER -->
+<div style="display:flex;background:#1a1a1a;color:#fff;margin-bottom:12px;border-left:4px solid var(--gold)">
+<div style="flex:1;padding:9px 14px;border-right:1px solid #333">
+<div style="font:600 8px var(--sans);color:var(--gold);letter-spacing:3px;margin-bottom:2px">★★ GRAND OPEN</div>
+<div style="font:700 14px var(--serif);color:#fff;letter-spacing:1px"><span data-offset="0" data-fmt="yymd-jp-wd" class="dyn-date">2026年 7月16日（木）</span></div>
+</div>
+<div style="flex:1;padding:9px 14px;border-right:1px solid #333">
+<div style="font:600 8px var(--sans);color:var(--gold);letter-spacing:3px;margin-bottom:2px">★ PRE-OPEN 体験会</div>
+<div style="font:700 13px var(--serif);color:#fff"><span data-offset-start="-15" data-offset-end="-3" data-fmt="range-full" class="dyn-date">7/1 〜 7/13</span> ／ 13日間</div>
+</div>
+<div style="flex:1;padding:9px 14px;border-right:1px solid #333">
+<div style="font:600 8px var(--sans);color:#9bb8e0;letter-spacing:3px;margin-bottom:2px">▶ 価格訴求 START</div>
+<div style="font:700 13px var(--serif);color:#fff"><span data-offset="-45" data-fmt="mdwd-jp" class="dyn-date">6月1日（月）</span></div>
+</div>
+<div style="flex:1;padding:9px 14px">
+<div style="font:600 8px var(--sans);color:#d8a890;letter-spacing:3px;margin-bottom:2px">▶ 体験訴求 切替</div>
+<div style="font:700 13px var(--serif);color:#fff"><span data-offset="-24" data-fmt="mdwd-jp" class="dyn-date">6月22日（月）</span></div>
+</div>
+</div>
+
+<!-- CALENDAR HEADER ROW 1: MONTH (dynamic) -->
+<div id="cal-month-header" style="display:flex;margin-bottom:1px">
+<div style="width:170px;flex-shrink:0"></div>
+<div id="cal-month-header-content" style="display:flex;flex:1"></div>
+</div>
+
+<!-- CALENDAR HEADER ROW 2: WEEK DATES -->
+<div style="display:flex;margin-bottom:1px;font-size:7px;text-align:center;font-weight:700;color:#555">
+<div style="width:170px;flex-shrink:0"></div>
+<div style="flex:1;background:#f0e8d8;padding:3px 0"><span data-offset-start="-76" data-offset-end="-70" class="dyn-date">5/1-7</span></div>
+<div style="flex:1;background:#f0e8d8;padding:3px 0;margin-left:1px"><span data-offset-start="-69" data-offset-end="-63" class="dyn-date">5/8-14</span></div>
+<div style="flex:1;background:#f0e8d8;padding:3px 0;margin-left:1px"><span data-offset-start="-62" data-offset-end="-56" class="dyn-date">5/15-21</span></div>
+<div style="flex:1;background:#f0e8d8;padding:3px 0;margin-left:1px"><span data-offset-start="-55" data-offset-end="-46" class="dyn-date">5/22-31</span></div>
+<div style="flex:1;background:#e8d0c0;padding:3px 0;margin-left:1px"><span data-offset-start="-45" data-offset-end="-39" class="dyn-date">6/1-7</span></div>
+<div style="flex:1;background:#e8d0c0;padding:3px 0;margin-left:1px"><span data-offset-start="-38" data-offset-end="-32" class="dyn-date">6/8-14</span></div>
+<div style="flex:1;background:#e8d0c0;padding:3px 0;margin-left:1px"><span data-offset-start="-31" data-offset-end="-25" class="dyn-date">6/15-21</span></div>
+<div style="flex:1;background:#e8d0c0;padding:3px 0;margin-left:1px"><span data-offset-start="-24" data-offset-end="-16" class="dyn-date">6/22-30</span></div>
+<div style="flex:1;background:#d0e0e8;padding:3px 0;margin-left:1px"><span data-offset-start="-15" data-offset-end="-3" class="dyn-date">7/1-13</span></div>
+<div style="flex:1;background:#d0e0e8;padding:3px 0;margin-left:1px"><span data-offset-start="-2" data-offset-end="13" class="dyn-date">7/14-29</span></div>
+</div>
+
+<!-- PHASE BAND -->
+<div style="display:flex;margin-bottom:1px;font-size:7px;color:#fff;font-weight:700;text-align:center;letter-spacing:1px">
+<div style="width:170px;flex-shrink:0;text-align:right;padding-right:8px;font-size:8px;font-style:italic;color:var(--gold);letter-spacing:0">PHASE →</div>
+<div style="flex:4;background:#8a6d45;padding:3px 0">P1 準備期</div>
+<div style="flex:3;background:#a05030;padding:3px 0;margin-left:1px">P2 価格訴求</div>
+<div style="flex:1;background:#7a6020;padding:3px 0;margin-left:1px">P3 体験</div>
+<div style="flex:1;background:#4d6e8a;padding:3px 0;margin-left:1px">P4 プレOP</div>
+<div style="flex:1;background:#c9a96e;padding:3px 0;margin-left:1px">P5 GO★</div>
+</div>
+
+<!-- COUNTDOWN ROW -->
+<div style="display:flex;margin-bottom:8px;font-size:7px;text-align:center;color:#888;font-weight:600">
+<div style="width:170px;flex-shrink:0;text-align:right;padding-right:8px;font-size:8px;font-style:italic;color:var(--gold)">オープン逆算 →</div>
+<div style="flex:1;padding:2px 0">G-11週</div>
+<div style="flex:1;padding:2px 0;margin-left:1px">G-10週</div>
+<div style="flex:1;padding:2px 0;margin-left:1px">G-9週</div>
+<div style="flex:1;padding:2px 0;margin-left:1px">G-7/8週</div>
+<div style="flex:1;padding:2px 0;margin-left:1px">G-6週</div>
+<div style="flex:1;padding:2px 0;margin-left:1px">G-5週</div>
+<div style="flex:1;padding:2px 0;margin-left:1px">G-4週</div>
+<div style="flex:1;padding:2px 0;margin-left:1px">G-3週</div>
+<div style="flex:1;padding:2px 0;margin-left:1px;color:var(--red);font-weight:700">G-2〜0</div>
+<div style="flex:1;padding:2px 0;margin-left:1px;color:var(--gold);font-weight:700">G+0〜2</div>
+</div>
+
+<!-- GANTT ROWS -->
+<div style="display:flex;align-items:stretch;margin-bottom:3px">
+<div style="width:170px;flex-shrink:0;padding:3px 0;font-size:9px;font-weight:600;color:#333;display:flex;align-items:center;gap:6px">
+<span style="color:var(--blue);font-size:13px;line-height:1">■</span>Meta広告</div>
+<div style="flex:1;height:19px;margin-left:1px"></div>
+<div style="flex:1;height:19px;margin-left:1px"></div>
+<div style="flex:1;height:19px;background:var(--blue);opacity:0.35;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">設計</div>
+<div style="flex:1;height:19px;background:var(--blue);opacity:0.6;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">ティザー</div>
+<div style="flex:1;height:19px;background:var(--blue);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">価格訴求</div>
+<div style="flex:1;height:19px;background:var(--blue);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">価格訴求</div>
+<div style="flex:1;height:19px;background:var(--blue);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">価格訴求</div>
+<div style="flex:1;height:19px;background:var(--blue);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">体験訴求</div>
+<div style="flex:1;height:19px;background:var(--blue);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">プレOP</div>
+<div style="flex:1;height:19px;background:var(--blue);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">継続</div>
+</div>
+<div style="display:flex;align-items:stretch;margin-bottom:3px">
+<div style="width:170px;flex-shrink:0;padding:3px 0;font-size:9px;font-weight:600;color:#333;display:flex;align-items:center;gap:6px">
+<span style="color:var(--green);font-size:13px;line-height:1">■</span>Google広告</div>
+<div style="flex:1;height:19px;margin-left:1px"></div>
+<div style="flex:1;height:19px;margin-left:1px"></div>
+<div style="flex:1;height:19px;background:var(--green);opacity:0.35;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">設計</div>
+<div style="flex:1;height:19px;background:var(--green);opacity:0.6;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">DSP</div>
+<div style="flex:1;height:19px;background:var(--green);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">検索</div>
+<div style="flex:1;height:19px;background:var(--green);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">検索</div>
+<div style="flex:1;height:19px;background:var(--green);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">検索</div>
+<div style="flex:1;height:19px;background:var(--green);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">体験KW</div>
+<div style="flex:1;height:19px;background:var(--green);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">+リマケ</div>
+<div style="flex:1;height:19px;background:var(--green);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">継続</div>
+</div>
+<div style="display:flex;align-items:stretch;margin-bottom:3px">
+<div style="width:170px;flex-shrink:0;padding:3px 0;font-size:9px;font-weight:600;color:#333;display:flex;align-items:center;gap:6px">
+<span style="color:var(--purple);font-size:13px;line-height:1">■</span>SEO対策</div>
+<div style="flex:1;height:19px;margin-left:1px"></div>
+<div style="flex:1;height:19px;background:var(--purple);opacity:0.35;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">KW設計</div>
+<div style="flex:1;height:19px;background:var(--purple);opacity:0.6;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">内部対策</div>
+<div style="flex:1;height:19px;background:var(--purple);opacity:0.8;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">記事1-2</div>
+<div style="flex:1;height:19px;background:var(--purple);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">記事</div>
+<div style="flex:1;height:19px;background:var(--purple);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">記事</div>
+<div style="flex:1;height:19px;background:var(--purple);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">記事</div>
+<div style="flex:1;height:19px;background:var(--purple);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">記事</div>
+<div style="flex:1;height:19px;background:var(--purple);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">記事</div>
+<div style="flex:1;height:19px;background:var(--purple);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">記事</div>
+</div>
+<div style="display:flex;align-items:stretch;margin-bottom:3px">
+<div style="width:170px;flex-shrink:0;padding:3px 0;font-size:9px;font-weight:600;color:#333;display:flex;align-items:center;gap:6px">
+<span style="color:var(--orange);font-size:13px;line-height:1">■</span>MEO対策</div>
+<div style="flex:1;height:19px;margin-left:1px"></div>
+<div style="flex:1;height:19px;margin-left:1px"></div>
+<div style="flex:1;height:19px;background:var(--orange);opacity:0.35;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">GBP開設</div>
+<div style="flex:1;height:19px;background:var(--orange);opacity:0.6;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">写真投稿</div>
+<div style="flex:1;height:19px;background:var(--orange);opacity:0.8;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">投稿開始</div>
+<div style="flex:1;height:19px;background:var(--orange);opacity:0.9;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">投稿</div>
+<div style="flex:1;height:19px;background:var(--orange);opacity:0.9;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">投稿</div>
+<div style="flex:1;height:19px;background:var(--orange);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">口コミ</div>
+<div style="flex:1;height:19px;background:var(--orange);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">口コミ強化</div>
+<div style="flex:1;height:19px;background:var(--orange);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">口コミ強化</div>
+</div>
+<div style="display:flex;align-items:stretch;margin-bottom:3px">
+<div style="width:170px;flex-shrink:0;padding:3px 0;font-size:9px;font-weight:600;color:#333;display:flex;align-items:center;gap:6px">
+<span style="color:var(--pink);font-size:13px;line-height:1">■</span>インフル ⚠要確認</div>
+<div style="flex:1;height:19px;margin-left:1px"></div>
+<div style="flex:1;height:19px;margin-left:1px"></div>
+<div style="flex:1;height:19px;margin-left:1px"></div>
+<div style="flex:1;height:19px;background:var(--pink);opacity:0.25;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">座組確認</div>
+<div style="flex:1;height:19px;background:var(--pink);opacity:0.35;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">選定</div>
+<div style="flex:1;height:19px;background:var(--pink);opacity:0.45;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">交渉</div>
+<div style="flex:1;height:19px;background:var(--pink);opacity:0.6;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">体験参加</div>
+<div style="flex:1;height:19px;background:var(--pink);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">体験告知</div>
+<div style="flex:1;height:19px;background:var(--pink);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">投稿</div>
+<div style="flex:1;height:19px;background:var(--pink);opacity:0.6;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">継続</div>
+</div>
+<div style="display:flex;align-items:stretch;margin-bottom:3px">
+<div style="width:170px;flex-shrink:0;padding:3px 0;font-size:9px;font-weight:600;color:#333;display:flex;align-items:center;gap:6px">
+<span style="color:var(--gold);font-size:13px;line-height:1">■</span>SNS縦動画 3万/本</div>
+<div style="flex:1;height:19px;margin-left:1px"></div>
+<div style="flex:1;height:19px;background:var(--gold);opacity:0.35;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">企画</div>
+<div style="flex:1;height:19px;background:var(--gold);opacity:0.6;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">初撮影</div>
+<div style="flex:1;height:19px;background:var(--gold);opacity:0.85;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">月4本</div>
+<div style="flex:1;height:19px;background:var(--gold);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">月4本</div>
+<div style="flex:1;height:19px;background:var(--gold);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">月4本</div>
+<div style="flex:1;height:19px;background:var(--gold);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">月4本</div>
+<div style="flex:1;height:19px;background:var(--gold);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">月6本</div>
+<div style="flex:1;height:19px;background:var(--gold);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">月6本</div>
+<div style="flex:1;height:19px;background:var(--gold);margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">月4本</div>
+</div>
+<div style="display:flex;align-items:stretch;margin-bottom:3px">
+<div style="width:170px;flex-shrink:0;padding:3px 0;font-size:9px;font-weight:600;color:#333;display:flex;align-items:center;gap:6px">
+<span style="color:var(--gold);font-size:13px;line-height:1">■</span>SNS静止画 2万/投稿</div>
+<div style="flex:1;height:19px;margin-left:1px"></div>
+<div style="flex:1;height:19px;background:#b89048;opacity:0.35;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">企画</div>
+<div style="flex:1;height:19px;background:#b89048;opacity:0.6;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">初投稿</div>
+<div style="flex:1;height:19px;background:#b89048;opacity:0.85;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">月8</div>
+<div style="flex:1;height:19px;background:#b89048;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">月8</div>
+<div style="flex:1;height:19px;background:#b89048;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">月8</div>
+<div style="flex:1;height:19px;background:#b89048;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">月8</div>
+<div style="flex:1;height:19px;background:#b89048;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">月10</div>
+<div style="flex:1;height:19px;background:#b89048;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">月10</div>
+<div style="flex:1;height:19px;background:#b89048;margin-left:1px;color:#fff;text-align:center;line-height:19px;font-size:7px;font-weight:600">月8</div>
+</div>
+
+
+<!-- CRITICAL MILESTONE CHIPS -->
+<div style="margin-top:10px">
+<div style="font:600 9px var(--sans);color:#666;letter-spacing:1px;margin-bottom:5px">▼ クリティカル日付（販促関連／オープンまでのカウントダウン）</div>
+<div style="display:flex;gap:5px;flex-wrap:wrap;font-size:8px">
+<div style="background:var(--dark);color:#fff;padding:4px 9px"><b style="color:var(--gold)"><span data-offset="-68" class="dyn-date">5/9</span>（G-10週）</b> 料金プラン確定</div>
+<div style="background:var(--dark);color:#fff;padding:4px 9px"><b style="color:var(--gold)"><span data-offset="-62" class="dyn-date">5/15</span>（G-9週）</b> 入会特典／体験詳細確定</div>
+<div style="background:var(--dark);color:#fff;padding:4px 9px"><b style="color:var(--gold)"><span data-offset="-57" class="dyn-date">5/20</span>（G-8週）</b> 広告アカウント整備完了</div>
+<div style="background:var(--blue);color:#fff;padding:4px 9px"><b><span data-offset="-45" class="dyn-date">6/1</span>（G-6週）</b> ▶ 価格訴求 配信開始</div>
+<div style="background:var(--blue);color:#fff;padding:4px 9px"><b><span data-offset="-24" class="dyn-date">6/22</span>（G-3週）</b> ▶ 体験訴求 切替</div>
+<div style="background:var(--gold);color:#fff;padding:4px 9px"><b><span data-offset="-15" class="dyn-date">7/1</span>（G-2週）</b> ★ プレオープン体験会</div>
+<div style="background:var(--gold);color:#fff;padding:4px 9px"><b><span data-offset-start="-2" data-offset-end="-1" class="dyn-date">7/14-15</span>（G-1週）</b> 準備休</div>
+<div style="background:var(--red);color:#fff;padding:4px 9px"><b><span data-offset="0" class="dyn-date">7/16</span>（G±0）</b> ★★ GRAND OPEN</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ─────────────────────────────────────────────
+     SLIDE 13: 役割分担マトリックス (RACI)
+───────────────────────────────────────────── -->
+<div class="slide light">
+<div class="top-bar"></div>
+<div class="pad">
+<span class="section-badge">SECTION 10</span>
+<h2 style="display:inline;margin-left:16px">役割分担マトリックス（RACI）</h2>
+<div class="gold-line"></div>
+<p class="subtitle">R＝実行 ／ A＝承認・最終責任 ／ C＝相談・協議 ／ I＝情報共有・報告先</p>
+<table>
+<tr>
+<th style="width:30%">タスク／領域</th>
+<th style="width:13%">代表</th>
+<th style="width:13%">マーケ部</th>
+<th style="width:13%">制作</th>
+<th style="width:13%">カメラマン</th>
+<th style="width:18%">外部ライター</th>
+</tr>
+<tr><td><b>戦略・方針決定</b></td><td class="raci-cell raci-A">A</td><td class="raci-cell raci-R">R</td><td class="raci-cell raci-I">I</td><td class="raci-cell">—</td><td class="raci-cell">—</td></tr>
+<tr><td><b>Meta広告 運用</b></td><td class="raci-cell raci-A">A</td><td class="raci-cell raci-R">R</td><td class="raci-cell raci-C">C</td><td class="raci-cell">—</td><td class="raci-cell">—</td></tr>
+<tr><td><b>Google広告 運用</b></td><td class="raci-cell raci-A">A</td><td class="raci-cell raci-R">R</td><td class="raci-cell raci-C">C</td><td class="raci-cell">—</td><td class="raci-cell">—</td></tr>
+<tr><td><b>SEO ディレクション</b></td><td class="raci-cell raci-A">A</td><td class="raci-cell raci-R">R</td><td class="raci-cell raci-I">I</td><td class="raci-cell">—</td><td class="raci-cell raci-R">R</td></tr>
+<tr><td><b>SEO ライティング</b></td><td class="raci-cell raci-I">I</td><td class="raci-cell raci-C">C／R</td><td class="raci-cell">—</td><td class="raci-cell">—</td><td class="raci-cell raci-R">R</td></tr>
+<tr><td><b>MEO 運用</b></td><td class="raci-cell raci-I">I</td><td class="raci-cell raci-R">R</td><td class="raci-cell">—</td><td class="raci-cell raci-C">C</td><td class="raci-cell">—</td></tr>
+<tr><td><b>SNS 縦動画 企画・撮影</b></td><td class="raci-cell raci-A">A</td><td class="raci-cell raci-R">R</td><td class="raci-cell raci-C">C</td><td class="raci-cell raci-R">R</td><td class="raci-cell">—</td></tr>
+<tr><td><b>SNS 静止画 企画・投稿</b></td><td class="raci-cell raci-I">I</td><td class="raci-cell raci-R">R</td><td class="raci-cell raci-C">C</td><td class="raci-cell raci-C">C</td><td class="raci-cell">—</td></tr>
+<tr><td><b>インフルエンサー 選定・交渉</b></td><td class="raci-cell raci-A">A</td><td class="raci-cell raci-R">R(要確認)</td><td class="raci-cell">—</td><td class="raci-cell">—</td><td class="raci-cell">—</td></tr>
+<tr><td><b>クリエイティブ承認</b></td><td class="raci-cell raci-A">A</td><td class="raci-cell raci-C">C</td><td class="raci-cell raci-R">R</td><td class="raci-cell">—</td><td class="raci-cell">—</td></tr>
+<tr><td><b>KPI モニタリング</b></td><td class="raci-cell raci-I">I</td><td class="raci-cell raci-R">R</td><td class="raci-cell raci-I">I</td><td class="raci-cell">—</td><td class="raci-cell">—</td></tr>
+<tr><td><b>月次レポート・レビュー</b></td><td class="raci-cell raci-A">A</td><td class="raci-cell raci-R">R</td><td class="raci-cell raci-I">I</td><td class="raci-cell">—</td><td class="raci-cell raci-I">I</td></tr>
+<tr><td><b>予算・契約変更承認</b></td><td class="raci-cell raci-A">A</td><td class="raci-cell raci-C">C</td><td class="raci-cell">—</td><td class="raci-cell">—</td><td class="raci-cell">—</td></tr>
+</table>
+<div class="key-box"><b>運用ルール：</b>各タスクのAは代表が握り、Rがマーケ部。週次でR-A間で15分の進捗共有、月次でI全員参加のレビュー会を設定</div>
+</div>
+</div>
+
+<!-- ─────────────────────────────────────────────
+     SLIDE 14: 月額コスト試算（4シナリオ）
+───────────────────────────────────────────── -->
+<div class="slide dark">
+<div class="top-bar"></div>
+<div class="pad">
+<span class="section-badge">SECTION 11</span>
+<h2 style="display:inline;margin-left:16px;color:var(--white)">月額コスト試算（4シナリオ）</h2>
+<div class="gold-line"></div>
+<p class="subtitle">フェーズ別の想定広告費・運用本数から算出する月額の目安。実数値は配信規模・本数に応じて変動</p>
+
+<div class="grid g4" style="gap:10px">
+<!-- シナリオA -->
+<div class="cost-card">
+<div class="phase-label">シナリオ A</div>
+<div class="phase-period">P1 立ち上げ最小（5月後半）</div>
+<div class="cost-line"><span>Meta 月10万配信</span><span class="amt">¥15,000</span></div>
+<div class="cost-line"><span>Google 月5万配信</span><span class="amt">¥7,500</span></div>
+<div class="cost-line"><span>SEO（パターンA）</span><span class="amt">¥100,000</span></div>
+<div class="cost-line"><span>MEO</span><span class="amt">¥0</span></div>
+<div class="cost-line"><span>縦動画 2本</span><span class="amt">¥60,000</span></div>
+<div class="cost-line"><span>静止画 4投稿</span><span class="amt">¥80,000</span></div>
+<div class="cost-line total"><span>マーケ部 計</span><span class="amt">¥262,500</span></div>
+<div class="cost-line"><span style="color:var(--warm-gray)">+ 広告費</span><span style="color:var(--warm-gray)">¥150,000</span></div>
+<div class="cost-line total" style="border-top:1px dashed var(--gold)"><span>総額目安</span><span class="amt">¥412,500</span></div>
+</div>
+
+<!-- シナリオB -->
+<div class="cost-card">
+<div class="phase-label">シナリオ B</div>
+<div class="phase-period">P2 価格訴求期（6/1-21）</div>
+<div class="cost-line"><span>Meta 月50万配信</span><span class="amt">¥75,000</span></div>
+<div class="cost-line"><span>Google 月30万配信</span><span class="amt">¥45,000</span></div>
+<div class="cost-line"><span>SEO（パターンA）</span><span class="amt">¥100,000</span></div>
+<div class="cost-line"><span>MEO</span><span class="amt">¥0</span></div>
+<div class="cost-line"><span>縦動画 4本</span><span class="amt">¥120,000</span></div>
+<div class="cost-line"><span>静止画 8投稿</span><span class="amt">¥160,000</span></div>
+<div class="cost-line total"><span>マーケ部 計</span><span class="amt">¥500,000</span></div>
+<div class="cost-line"><span style="color:var(--warm-gray)">+ 広告費</span><span style="color:var(--warm-gray)">¥800,000</span></div>
+<div class="cost-line total" style="border-top:1px dashed var(--gold)"><span>総額目安</span><span class="amt">¥1,300,000</span></div>
+</div>
+
+<!-- シナリオC -->
+<div class="cost-card">
+<div class="phase-label">シナリオ C</div>
+<div class="phase-period">P3-P4 体験＆プレオープン</div>
+<div class="cost-line"><span>Meta 月100万配信</span><span class="amt">¥150,000</span></div>
+<div class="cost-line"><span>Google 月50万配信</span><span class="amt">¥75,000</span></div>
+<div class="cost-line"><span>SEO（パターンA）</span><span class="amt">¥100,000</span></div>
+<div class="cost-line"><span>MEO</span><span class="amt">¥0</span></div>
+<div class="cost-line"><span>縦動画 6本</span><span class="amt">¥180,000</span></div>
+<div class="cost-line"><span>静止画 10投稿</span><span class="amt">¥200,000</span></div>
+<div class="cost-line total"><span>マーケ部 計</span><span class="amt">¥705,000</span></div>
+<div class="cost-line"><span style="color:var(--warm-gray)">+ 広告費</span><span style="color:var(--warm-gray)">¥1,500,000</span></div>
+<div class="cost-line total" style="border-top:1px dashed var(--gold)"><span>総額目安</span><span class="amt">¥2,205,000</span></div>
+</div>
+
+<!-- シナリオD -->
+<div class="cost-card">
+<div class="phase-label">シナリオ D</div>
+<div class="phase-period">P5 安定運用期</div>
+<div class="cost-line"><span>Meta 月300万配信</span><span class="amt">¥300,000</span></div>
+<div class="cost-line"><span>Google 月100万配信</span><span class="amt">¥150,000</span></div>
+<div class="cost-line"><span>SEO（パターンA）</span><span class="amt">¥100,000</span></div>
+<div class="cost-line"><span>MEO</span><span class="amt">¥0</span></div>
+<div class="cost-line"><span>縦動画 4本</span><span class="amt">¥120,000</span></div>
+<div class="cost-line"><span>静止画 8投稿</span><span class="amt">¥160,000</span></div>
+<div class="cost-line total"><span>マーケ部 計</span><span class="amt">¥830,000</span></div>
+<div class="cost-line"><span style="color:var(--warm-gray)">+ 広告費</span><span style="color:var(--warm-gray)">¥4,000,000</span></div>
+<div class="cost-line total" style="border-top:1px dashed var(--gold)"><span>総額目安</span><span class="amt">¥4,830,000</span></div>
+</div>
+</div>
+<div class="key-box"><b>注意：</b>広告費（媒体費）と運用料は別。広告費は原則クライアント直接決済。Metaは月300万円以上で料率10%に減率（シナリオD適用）</div>
+</div>
+</div>
+
+<!-- ─────────────────────────────────────────────
+     SLIDE 15: 着手前 準備チェックリスト
+───────────────────────────────────────────── -->
+<div class="slide light">
+<div class="top-bar"></div>
+<div class="pad">
+<span class="section-badge">SECTION 12</span>
+<h2 style="display:inline;margin-left:16px">着手前 準備チェックリスト</h2>
+<div class="gold-line"></div>
+<p class="subtitle">マーケ部が稼働を開始する前に、クライアント側で確定・付与・準備が必要な項目</p>
+
+<div class="grid g2" style="gap:14px">
+<div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">事業情報</div><div class="check-text"><b>会費・料金プランの確定</b>（<span data-offset="-68" class="dyn-date">5/9</span>）／LP・チラシ・広告コピーの前提</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">事業情報</div><div class="check-text"><b>営業時間・休館日の確定</b>（<span data-offset="-68" class="dyn-date">5/9</span>）／GBP・HP掲載に必要</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">事業情報</div><div class="check-text"><b>レッスンメニュー構成</b>の確定（<span data-offset="-68" class="dyn-date">5/9</span>）／クリエイティブ訴求の前提</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">事業情報</div><div class="check-text"><b>入会特典・キャンペーン内容</b>（<span data-offset="-62" class="dyn-date">5/15</span>）／価格訴求広告コピーに直結</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">事業情報</div><div class="check-text"><b>体験レッスン詳細</b>（時間・内容・料金・持ち物）の確定（<span data-offset="-62" class="dyn-date">5/15</span>）</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">広告</div><div class="check-text"><b>Meta Business Manager</b> アカウント発行・権限付与</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">広告</div><div class="check-text"><b>Google広告アカウント</b> 発行・管理者権限付与</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">広告</div><div class="check-text"><b>支払い方法</b>の設定（法人カード／請求書）</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">計測</div><div class="check-text"><b>GA4 ／ GTM</b> 導入・管理権限付与</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">計測</div><div class="check-text"><b>Search Console</b> アクセス権限付与</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">計測</div><div class="check-text"><b>Meta Pixel・CAPI</b> 設置のためのLP/HPアクセス権</div></div>
+</div>
+<div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">WEB</div><div class="check-text"><b>HP公開</b>（広告開始前必須・<span data-offset="-46" class="dyn-date">5/31</span>目標）</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">WEB</div><div class="check-text"><b>LP（価格訴求版・体験訴求版）</b>の公開／編集権限の整理</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">WEB</div><div class="check-text"><b>UTMパラメータ設計</b>のルール合意</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">LINE</div><div class="check-text"><b>LINE公式アカウント開設</b>・運用責任者の確定</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">SEO</div><div class="check-text"><b>SEOパターンA／B</b>の選択（MYメディカル連携 or 全マーケ部）</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">SEO</div><div class="check-text"><b>対策KW候補リスト</b>のヒアリング（代表）</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">MEO</div><div class="check-text"><b>Googleビジネスプロフィール</b> 開設・管理権限付与</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">SNS</div><div class="check-text"><b>月次の本数合意</b>（縦動画／静止画 各何本／月）</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">SNS</div><div class="check-text"><b>出演者の肖像使用同意書</b>（インストラクター・モデル）</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">SNS</div><div class="check-text"><b>撮影日の確保</b>（スタジオ・モデル・カメラマン）</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">法務</div><div class="check-text"><b>特商法表記・プライバシーポリシー</b>のHP/LP整備</div></div>
+<div class="check-item"><div class="check-box"></div><div class="check-cat">法務</div><div class="check-text"><b>広告表記ルール</b>（薬機法・景表法）の確認</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ─────────────────────────────────────────────
+     SLIDE 16: 確認事項・留意事項
+───────────────────────────────────────────── -->
+<div class="slide light">
+<div class="top-bar"></div>
+<div class="pad">
+<span class="section-badge">SECTION 13</span>
+<h2 style="display:inline;margin-left:16px">確認事項・留意事項</h2>
+<div class="gold-line"></div>
+<p class="subtitle">現時点で未確定・要相談の項目。意思決定後に本資料を更新</p>
+
+<table>
+<tr><th style="width:5%">No</th><th style="width:18%">項目</th><th style="width:42%">確認内容</th><th style="width:13%">担当</th><th style="width:12%">期日目安</th><th style="width:10%">状態</th></tr>
+<tr><td>01</td><td><b>SEOパターン選択</b></td><td>パターンA（MYメディカル連携）／パターンB（全マーケ部）のどちらを採用するか</td><td>代表</td><td><span data-offset="-68" class="dyn-date">5/9</span></td><td><span class="status-tbd">未決</span></td></tr>
+<tr><td>02</td><td><b>SEO 文字単価</b></td><td>パターンB採用時の月間想定文字数・本数（単価3.9円）</td><td>代表／マーケ部</td><td><span data-offset="-68" class="dyn-date">5/9</span></td><td><span class="status-tbd">未決</span></td></tr>
+<tr><td>03</td><td><b>MEOの適用条件</b></td><td>マーケ部の他領域受託範囲が確定すればMEOサービス料金（0円）適用</td><td>代表／マーケ部</td><td><span data-offset="-62" class="dyn-date">5/15</span></td><td><span class="status-tbd">未決</span></td></tr>
+<tr><td>04</td><td><b>インフルエンサー対応可否</b></td><td>WEB（HP・LP・LINE）座組の確認後、マーケ部での対応可否判断</td><td>代表／マーケ部</td><td><span data-offset="-57" class="dyn-date">5/20</span></td><td><span class="status-tbd">確認中</span></td></tr>
+<tr><td>05</td><td><b>HP・LP制作 担当</b></td><td>本契約スコープ外。誰が制作・運用するかの整理。編集権限・修正速度</td><td>代表</td><td><span data-offset="-77" class="dyn-date">4/30</span></td><td><span class="status-tbd">未決</span></td></tr>
+<tr><td>06</td><td><b>LINE構築 担当</b></td><td>本契約スコープ外。LINE公式・エルメ・hacomono連携の担当整理</td><td>代表</td><td>4/末</td><td><span class="status-tbd">未決</span></td></tr>
+<tr><td>07</td><td><b>SNS月次本数</b></td><td>立ち上げ最小／スタンダード／拡大のどのプランで開始するか</td><td>代表／マーケ部</td><td>5/15</td><td><span class="status-tbd">未決</span></td></tr>
+<tr><td>08</td><td><b>広告費の決済方法</b></td><td>クライアント直接決済 or マーケ部立替＋精算</td><td>代表／マーケ部</td><td>5/20</td><td><span class="status-tbd">未決</span></td></tr>
+<tr><td>09</td><td><b>月次レポート様式</b></td><td>提出様式・タイミング・KPI項目の合意</td><td>マーケ部</td><td><span data-offset="-46" class="dyn-date">5/31</span></td><td><span class="status-tbd">未決</span></td></tr>
+<tr><td>10</td><td><b>契約期間・解除条件</b></td><td>最低契約期間・中途解約条件・通知期間の合意</td><td>代表／マーケ部</td><td><span data-offset="-46" class="dyn-date">5/31</span></td><td><span class="status-tbd">未決</span></td></tr>
+<tr><td>11</td><td><b>整形外科監修USP</b></td><td>マスター上の重要USP。確定タイミング次第でクリエイティブ着手が変動</td><td>代表</td><td>マスター参照</td><td><span class="status-tbd">確認中</span></td></tr>
+<tr><td>12</td><td><b>料金プラン外の追加施策</b></td><td>例：オフラインチラシ・雑誌媒体・DM等は本契約外。別途見積もり</td><td>代表／マーケ部</td><td>都度</td><td><span class="status-tbd">随時</span></td></tr>
+</table>
+<div class="key-box"><b>運用ルール：</b>未決事項は週次MTGで進捗確認。決定次第本資料に反映しバージョン更新（v1.1, v1.2...）</div>
+</div>
+</div>
+
+<!-- ─────────────────────────────────────────────
+     SLIDE 17: マスター工程表との統合方針
+───────────────────────────────────────────── -->
+<div class="slide dark">
+<div class="top-bar"></div>
+<div class="pad">
+<span class="section-badge">SECTION 14</span>
+<h2 style="display:inline;margin-left:16px;color:var(--white)">マスター工程表との統合方針</h2>
+<div class="gold-line"></div>
+<p class="subtitle">本資料の各施策がマスター工程表のどのカテゴリ・タスクIDと対応するかを整理。最終的にマスターへ統合する</p>
+
+<table>
+<tr><th style="width:18%">本資料 領域</th><th style="width:18%">マスター カテゴリ</th><th style="width:34%">主な対応タスクID</th><th style="width:30%">統合方針</th></tr>
+<tr>
+<td style="font-weight:700;color:var(--blue)">Meta広告</td>
+<td>sns（SNS広告）</td>
+<td>t39, t40, t41, t42, t43</td>
+<td>マスタータスクに「料金条件・運用責任者」を補記</td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--green)">Google広告</td>
+<td>google（Google/MEO）</td>
+<td>t48, t49 ／ ※ディスプレイ広告タスク追加</td>
+<td>ティザー期（ディスプレイ）のタスクをマスターへ追加</td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--purple)">SEO</td>
+<td>web（Web制作）に追加</td>
+<td>※マスターに専用カテゴリなし → web内に新規追加</td>
+<td>SEOカテゴリを新設 or web配下にサブグループ作成</td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--orange)">MEO</td>
+<td>google（Google/MEO）</td>
+<td>t46, t47, t50</td>
+<td>料金条件（0円・条件付）を補記</td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--pink)">インフルエンサー</td>
+<td>sns（SNS広告）</td>
+<td>t44, t45</td>
+<td>対応可否確定後にマスターを更新</td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--gold)">SNS運用（縦動画／静止画）</td>
+<td>creative ／ sns</td>
+<td>t05, t06, t07, t10, t11 ／ ※定常運用タスク追加</td>
+<td>「月次SNS運用」タスクをcreative or sns配下に新設</td>
+</tr>
+</table>
+
+<div class="grid g2" style="gap:14px;margin-top:14px">
+<div class="card"><div class="card-bar-left" style="background:var(--gold)"></div><h4 style="margin-left:10px">統合タイミング</h4><p style="margin-left:10px">本資料v1の内容確定後 → マスターへ「料金条件」「責任者」「準備事項」を一括反映 → 以降はマスター中心で運用</p></div>
+<div class="card"><div class="card-bar-left" style="background:var(--gold)"></div><h4 style="margin-left:10px">本資料の役割転換</h4><p style="margin-left:10px">統合後は本資料が「契約条件のリファレンス」として機能。日々の進捗管理はマスター工程表で実施</p></div>
+</div>
+<div class="key-box"><b>次のアクション：</b>① 確認事項Slide 16を埋める → ② v1.1〜v1.x で内容確定 → ③ マスター工程表に統合 → ④ 月次レビュー運用へ移行</div>
+</div>
+</div>
+
+<!-- ─────────────────────────────────────────────
+     SLIDE 18: まとめ
+───────────────────────────────────────────── -->
+<div class="slide dark" style="min-height:540px">
+<div class="top-bar"></div>
+<div class="pad">
+<h1 style="color:var(--white);font-size:32px">まとめ</h1>
+<div class="gold-line" style="margin-bottom:24px"></div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="display:flex;align-items:center;background:var(--dark);padding:11px 18px"><span style="font:700 16px var(--serif);color:var(--gold);width:40px">01</span><span style="width:2px;height:20px;background:var(--gold);margin:0 14px"></span><span style="font-size:11px;color:var(--light-gray)">マーケ部の対応範囲は<b style="color:var(--white)">Meta／Google／SEO／MEO／インフルエンサー／SNS</b> の6領域</span></div>
+<div style="display:flex;align-items:center;background:var(--dark);padding:11px 18px"><span style="font:700 16px var(--serif);color:var(--gold);width:40px">02</span><span style="width:2px;height:20px;background:var(--gold);margin:0 14px"></span><span style="font-size:11px;color:var(--light-gray)">料金体系は<b style="color:var(--white)">配信額連動（10%/15%）＋ SEO月額 ＋ SNS本数単価</b>のハイブリッド構造</span></div>
+<div style="display:flex;align-items:center;background:var(--dark);padding:11px 18px"><span style="font:700 16px var(--serif);color:var(--gold);width:40px">03</span><span style="width:2px;height:20px;background:var(--gold);margin:0 14px"></span><span style="font-size:11px;color:var(--light-gray)">各施策に<b style="color:var(--white)">「いつ・どこで・誰が・何を・期限・準備」</b>の6視点で実行設計を整理</span></div>
+<div style="display:flex;align-items:center;background:var(--dark);padding:11px 18px"><span style="font:700 16px var(--serif);color:var(--gold);width:40px">04</span><span style="width:2px;height:20px;background:var(--gold);margin:0 14px"></span><span style="font-size:11px;color:var(--light-gray)">マスター工程表のフェーズ（P1〜P5）と整合し、<b style="color:var(--white)"><span data-offset="-45" class="dyn-date">6/1</span>価格訴求／<span data-offset="-24" class="dyn-date">6/22</span>体験訴求／<span data-offset="-15" class="dyn-date">7/1</span>プレオープン</b>を基幹日に</span></div>
+<div style="display:flex;align-items:center;background:var(--dark);padding:11px 18px"><span style="font:700 16px var(--serif);color:var(--gold);width:40px">05</span><span style="width:2px;height:20px;background:var(--gold);margin:0 14px"></span><span style="font-size:11px;color:var(--light-gray)">RACIマトリックスで<b style="color:var(--white)">代表＝Aの承認権 ／ マーケ部＝Rの実行責任</b>を明確化</span></div>
+<div style="display:flex;align-items:center;background:var(--dark);padding:11px 18px"><span style="font:700 16px var(--serif);color:var(--gold);width:40px">06</span><span style="width:2px;height:20px;background:var(--gold);margin:0 14px"></span><span style="font-size:11px;color:var(--light-gray)">月額コスト試算は<b style="color:var(--white)">A立ち上げ41万→D安定運用483万</b>（広告費含む総額目安）</span></div>
+<div style="display:flex;align-items:center;background:var(--dark);padding:11px 18px"><span style="font:700 16px var(--serif);color:var(--gold);width:40px">07</span><span style="width:2px;height:20px;background:var(--gold);margin:0 14px"></span><span style="font-size:11px;color:var(--light-gray)">未決事項12件は週次MTGで進捗管理→確定次第v1.x更新→最終的にマスターへ統合</span></div>
+</div>
+<p style="font:300 10px var(--sans);color:var(--warm-gray);margin-top:28px;text-align:center">— END OF DOCUMENT v1.0 ／ Next: 確認事項の解消とマスター統合 —</p>
+</div>
+</div>
+
+<script>
+(function(){
+  const HARD_DEFAULT = '2026-07-16';
+  const LS_KEY = 'sui_go_date_v2';
+  const URL_PARAM = 'go';
+
+  /* ── Source priority: URL > localStorage > Default ── */
+  let goSource = 'default';   // 'url' | 'storage' | 'default'
+
+  function isValidDate(str){
+    if (!str || typeof str !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(str)) return false;
+    const d = new Date(str);
+    return !isNaN(d.getTime());
+  }
+
+  function getInitialGoDate(){
+    /* 1. URL parameter (highest priority — for shared scenarios) */
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const fromUrl = params.get(URL_PARAM);
+      if (isValidDate(fromUrl)) { goSource = 'url'; return fromUrl; }
+    } catch(e){}
+    /* 2. localStorage (personal device memory) */
+    try {
+      const fromLS = localStorage.getItem(LS_KEY);
+      if (isValidDate(fromLS)) { goSource = 'storage'; return fromLS; }
+    } catch(e){}
+    /* 3. Hardcoded default */
+    return HARD_DEFAULT;
+  }
+
+  function parseGO(str){
+    const [y,m,d] = str.split('-').map(Number);
+    return new Date(y, m-1, d, 12, 0, 0);
+  }
+
+  const initialDate = getInitialGoDate();
+  let goDate = parseGO(initialDate);
+
+  function dateFromOffset(off){
+    const d = new Date(goDate.getTime());
+    d.setDate(d.getDate() + off);
+    return d;
+  }
+
+  function fmt(d, format){
+    const m = d.getMonth() + 1;
+    const day = d.getDate();
+    const y = d.getFullYear();
+    const wd = ['日','月','火','水','木','金','土'][d.getDay()];
+    switch(format){
+      case 'md':         return `${m}/${day}`;
+      case 'mdwd':       return `${m}/${day}（${wd}）`;
+      case 'md-jp':      return `${m}月${day}日`;
+      case 'mdwd-jp':    return `${m}月${day}日（${wd}）`;
+      case 'ymd':        return `${y}/${m}/${day}`;
+      case 'ymd-wd':     return `${y}/${m}/${day}（${wd}）`;
+      case 'yymd-jp-wd': return `${y}年 ${m}月${day}日（${wd}）`;
+      case 'month':      return `${m}月`;
+      case 'raw':        return '';
+      default:           return `${m}/${day}`;
+    }
+  }
+
+  const WEEK_BUCKETS = [
+    {start:-76, end:-70}, {start:-69, end:-63}, {start:-62, end:-56}, {start:-55, end:-46},
+    {start:-45, end:-39}, {start:-38, end:-32}, {start:-31, end:-25}, {start:-24, end:-16},
+    {start:-15, end:-3},  {start:-2,  end:13}
+  ];
+
+  function renderMonthHeader(){
+    const c = document.getElementById('cal-month-header-content');
+    if (!c) return;
+    const groups = [];
+    WEEK_BUCKETS.forEach(b => {
+      const d = dateFromOffset(b.start);
+      const month = d.getMonth() + 1;
+      const year = d.getFullYear();
+      const key = `${year}-${month}`;
+      if (groups.length && groups[groups.length-1].key === key){
+        groups[groups.length-1].count++;
+      } else {
+        groups.push({key, month, year, count: 1});
+      }
+    });
+    const palette = [
+      {bg:'#d8c898', fg:'#5a4520'},
+      {bg:'#d8a890', fg:'#5a2520'},
+      {bg:'#9bb8d8', fg:'#1a3a5a'},
+      {bg:'#a8c89b', fg:'#1a3a1a'},
+      {bg:'#c89bb8', fg:'#3a1a3a'},
+      {bg:'#c8b89b', fg:'#3a2a1a'}
+    ];
+    c.innerHTML = groups.map((g, i) => {
+      const p = palette[i % palette.length];
+      const ml = i === 0 ? '0' : '1px';
+      return `<div style="flex:${g.count};background:${p.bg};color:${p.fg};padding:3px 0;text-align:center;font-weight:700;font-size:10px;margin-left:${ml};font-family:var(--serif)">${g.month}月</div>`;
+    }).join('');
+  }
+
+  function recalc(){
+    document.querySelectorAll('[data-offset]:not([data-offset-end])').forEach(el=>{
+      const off = parseInt(el.dataset.offset);
+      const f = el.dataset.fmt || 'md';
+      if (f === 'raw') return;
+      el.textContent = fmt(dateFromOffset(off), f);
+    });
+    document.querySelectorAll('[data-offset-start][data-offset-end]').forEach(el=>{
+      const s = parseInt(el.dataset.offsetStart);
+      const e = parseInt(el.dataset.offsetEnd);
+      const f = el.dataset.fmt || 'range';
+      const sd = dateFromOffset(s);
+      const ed = dateFromOffset(e);
+      let sep = '-', f1 = 'md', f2 = 'md';
+      if (f === 'range-full'){ sep = ' 〜 '; }
+      else if (f === 'range-jp'){ sep = ' 〜 '; f1='md-jp'; f2='md-jp'; }
+      else if (f === 'range-tilde'){ sep = '〜'; }
+      el.textContent = fmt(sd, f1) + sep + fmt(ed, f2);
+    });
+    renderMonthHeader();
+    const display = document.getElementById('go-display');
+    if (display) display.textContent = '⇒ ' + fmt(goDate, 'yymd-jp-wd');
+  }
+
+  /* ── URL & localStorage sync ── */
+  function updateUrlBar(dateStr){
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.set(URL_PARAM, dateStr);
+      window.history.replaceState({}, '', url);
+    } catch(e){}
+  }
+  function clearUrlParam(){
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.delete(URL_PARAM);
+      window.history.replaceState({}, '', url);
+    } catch(e){}
+  }
+  function persistLocal(dateStr){
+    try { localStorage.setItem(LS_KEY, dateStr); } catch(e){}
+  }
+  function clearLocal(){
+    try { localStorage.removeItem(LS_KEY); } catch(e){}
+  }
+
+  function showBadge(){
+    const badge = document.getElementById('scenario-badge');
+    if (badge) badge.classList.add('active');
+  }
+  function hideBadge(){
+    const badge = document.getElementById('scenario-badge');
+    if (badge) badge.classList.remove('active');
+  }
+
+  /* ── Event handlers ── */
+  function onChange(){
+    const v = document.getElementById('go-input').value;
+    if (!v || !isValidDate(v)) return;
+    goDate = parseGO(v);
+    updateUrlBar(v);
+    persistLocal(v);
+    showBadge();
+    recalc();
+  }
+
+  window.resetGoDate = function(){
+    const inp = document.getElementById('go-input');
+    if (inp) inp.value = HARD_DEFAULT;
+    goDate = parseGO(HARD_DEFAULT);
+    clearLocal();
+    clearUrlParam();
+    hideBadge();
+    recalc();
+  };
+
+  window.copyShareUrl = function(){
+    const inputVal = document.getElementById('go-input').value;
+    const u = new URL(window.location.href);
+    if (isValidDate(inputVal)) {
+      u.searchParams.set(URL_PARAM, inputVal);
+    }
+    const shareUrl = u.toString();
+    const btn = document.getElementById('copy-btn');
+    const toast = document.getElementById('share-toast');
+
+    const onSuccess = () => {
+      if (toast) {
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2200);
+      }
+      if (btn) {
+        const orig = btn.innerHTML;
+        btn.classList.add('copied');
+        btn.innerHTML = '✓ コピー完了';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.innerHTML = orig;
+        }, 2200);
+      }
+    };
+    const onFail = () => {
+      window.prompt('以下のURLをコピーしてください：', shareUrl);
+    };
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(shareUrl).then(onSuccess).catch(onFail);
+    } else {
+      onFail();
+    }
+  };
+
+  /* ── Bootstrap ── */
+  document.addEventListener('DOMContentLoaded', () => {
+    const inp = document.getElementById('go-input');
+    if (inp) {
+      inp.value = initialDate;
+      inp.addEventListener('change', onChange);
+    }
+    /* Show badge if URL parameter was the source */
+    if (goSource === 'url') showBadge();
+    /* If URL had a param, sync localStorage too (so reloads remember) */
+    if (goSource === 'url') persistLocal(initialDate);
+    recalc();
+  });
+})();
+</script>
+</body>
+</html>
