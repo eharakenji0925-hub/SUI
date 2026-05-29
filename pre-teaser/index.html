@@ -214,6 +214,23 @@
   .ritual span{font-family:var(--serif-en);font-size:.82rem;letter-spacing:.34em;
     text-transform:uppercase;color:var(--gold-soft)}
 
+  /* ---------- GALLERY ---------- */
+  .gallery{background:var(--cream)}
+  .gallery .head{text-align:center;margin-bottom:0}
+  .mosaic{display:grid;grid-template-columns:repeat(6,1fr);
+    grid-auto-rows:10px;gap:16px;grid-auto-flow:dense;margin-top:64px}
+  .mosaic .tile{position:relative;overflow:hidden;background:var(--terra-deep);border-radius:3px}
+  .mosaic .tile img{width:100%;height:100%;object-fit:cover;display:block;
+    transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+  .mosaic .tile:hover img{transform:scale(1.04)}
+  .mosaic .p{grid-column:span 2;grid-row:span 32}
+  .mosaic .l{grid-column:span 3;grid-row:span 24}
+  .mosaic .duo{grid-column:span 3;grid-row:span 15}
+  .mosaic .cap{position:absolute;inset:0;display:flex;align-items:center;
+    justify-content:center;pointer-events:none}
+  .mosaic .cap span{font-family:var(--serif-en);letter-spacing:.34em;
+    color:rgba(250,244,236,.92);font-size:clamp(26px,3.4vw,46px);text-transform:uppercase}
+
   /* ---------- FORM ---------- */
   .reg{background:var(--paper)}
   .reg .head{text-align:center;margin-bottom:48px}
@@ -262,6 +279,10 @@
     .phase .ph-img{min-height:260px}
     .place .info div{grid-template-columns:96px 1fr;gap:12px}
     body{font-size:15.5px}
+    .mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:8px;gap:10px}
+    .mosaic .p{grid-column:span 1;grid-row:span 38}
+    .mosaic .l{grid-column:span 2;grid-row:span 30}
+    .mosaic .duo{grid-column:span 2;grid-row:span 30}
   }
 </style>
 </head>
@@ -403,6 +424,27 @@
     <p>動くより前に、ただ座って、息をする。<br>湖畔に佇むように。</p>
     <div class="ritual">
       <span>Arrive</span><span>Sit</span><span>Breathe</span><span>Begin</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALLERY ===================== -->
+<section class="gallery">
+  <div class="wrap">
+    <div class="head narrow rise">
+      <span class="label">Gallery</span>
+      <h2>呼吸が、かたちになる。<span class="en">A single breath, taking shape.</span></h2>
+    </div>
+    <div class="mosaic rise">
+      <figure class="tile p"><img src="assets/gallery/L2405134.jpg" alt=""></figure>
+      <figure class="tile p"><img src="assets/gallery/L2405136.jpg" alt=""></figure>
+      <figure class="tile p"><img src="assets/gallery/L2405049.jpg" alt=""></figure>
+      <figure class="tile l"><img src="assets/gallery/L2405054.jpg" alt="">
+        <span class="cap"><span>Breathe</span></span>
+      </figure>
+      <figure class="tile l"><img src="assets/gallery/L2405110.jpg" alt=""></figure>
+      <figure class="tile duo"><img src="assets/gallery/L2404836.jpg" alt=""></figure>
+      <figure class="tile duo"><img src="assets/gallery/L2404777.jpg" alt=""></figure>
     </div>
   </div>
 </section>
