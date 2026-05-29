@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TODO(公開先): 本番ドメイン確定後に og:url / canonical を差し替え -->
+<title>Pilates Studio SUI ｜ 関係者先行ご案内 — ひと息、湖畔へ。</title>
+<meta name="description" content="渋谷・宮下公園に2026年9月1日。Pilates Studio SUI、関係者先行のご案内。割引価格が整い次第、メールでひと足はやくお知らせします。">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pilates Studio SUI ｜ 関係者先行ご案内">
+<meta property="og:description" content="ひと息、湖畔へ。渋谷・宮下公園に2026年9月1日。関係者先行のご案内。">
+<meta property="og:image" content="assets/hero-entrance.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Shippori+Mincho+B1:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --terra-deep:#7c3f29;
+    --terra:#a0563a;
+    --terra-soft:#b5704a;
+    --sand:#efe3d3;
+    --cream:#faf4ec;
+    --paper:#f5ebdd;
+    --gold:#d99a55;
+    --gold-soft:#e6b277;
+    --night:#1f2a36;
+    --ink:#3a2a20;
+    --ink-soft:#6b5847;
+    --line:rgba(58,42,32,.16);
+    --serif-en:"Cormorant Garamond",serif;
+    --serif-jp:"Shippori Mincho B1","Hiragino Mincho ProN",serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--serif-jp);
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.95;
+    font-size:16px;
+    letter-spacing:.04em;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;width:100%;height:auto}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  .narrow{max-width:680px;margin:0 auto}
+  .label{
+    font-family:var(--serif-en);
+    font-size:.78rem;
+    letter-spacing:.42em;
+    text-transform:uppercase;
+    color:var(--terra);
+    margin-bottom:1.4em;
+    display:block;
+  }
+  h2{
+    font-family:var(--serif-jp);
+    font-weight:500;
+    font-size:clamp(1.5rem,4.6vw,2.3rem);
+    line-height:1.7;
+    letter-spacing:.08em;
+    margin-bottom:1.1em;
+  }
+  h2 .en{
+    display:block;
+    font-family:var(--serif-en);
+    font-style:italic;
+    font-weight:400;
+    font-size:.62em;
+    letter-spacing:.04em;
+    color:var(--ink-soft);
+    margin-top:.7em;
+  }
+  p{font-size:1rem;line-height:2.15;color:var(--ink-soft)}
+  section{padding:clamp(72px,12vw,140px) 0}
+
+  /* reveal on scroll */
+  .rise{opacity:0;transform:translateY(26px);transition:opacity 1.2s ease,transform 1.2s ease}
+  .rise.in{opacity:1;transform:none}
+
+  /* water-moon motif (月と水面) */
+  .motif{display:flex;flex-direction:column;align-items:center;gap:8px;margin:0 auto 12px}
+  .motif svg{display:block}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;min-height:100svh;
+    display:flex;align-items:center;justify-content:center;
+    text-align:center;color:var(--sand);
+    background:#3a2017;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:url('assets/hero-entrance.jpg') center 38%/cover no-repeat;
+    transform:scale(1.04);
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(40,22,14,.55) 0%,rgba(40,22,14,.30) 38%,rgba(40,22,14,.74) 100%);
+  }
+  .hero-inner{position:relative;z-index:2;padding:40px 24px}
+  .hero-logo{width:128px;margin:0 auto 34px;border-radius:50%;
+    box-shadow:0 8px 40px rgba(0,0,0,.35);opacity:.97}
+  .hero .eyebrow{
+    font-family:var(--serif-en);font-size:.8rem;letter-spacing:.5em;
+    text-transform:uppercase;color:var(--gold-soft);margin-bottom:1.6em;
+  }
+  .hero h1{
+    font-family:var(--serif-jp);font-weight:500;
+    font-size:clamp(2.5rem,9vw,4.4rem);
+    letter-spacing:.14em;line-height:1.5;
+    text-shadow:0 2px 30px rgba(0,0,0,.4);
+  }
+  .hero .sub-en{
+    font-family:var(--serif-en);font-style:italic;
+    font-size:clamp(1.05rem,3.4vw,1.5rem);
+    letter-spacing:.12em;color:var(--sand);
+    margin-top:.8em;opacity:.92;
+  }
+  .hero .meta{
+    margin-top:2.4em;font-size:.92rem;letter-spacing:.18em;
+    color:var(--sand);opacity:.9;
+  }
+  .hero .lead{
+    max-width:30em;margin:2em auto 0;font-size:.98rem;
+    line-height:2.2;color:var(--sand);opacity:.92;
+  }
+  .btn{
+    display:inline-block;margin-top:2.8em;
+    font-family:var(--serif-jp);font-size:.95rem;letter-spacing:.22em;
+    color:var(--cream);text-decoration:none;
+    padding:1.05em 2.6em;border:1px solid rgba(239,227,211,.6);
+    border-radius:40px;transition:.5s ease;backdrop-filter:blur(2px);
+  }
+  .btn:hover{background:rgba(239,227,211,.12);border-color:var(--sand);letter-spacing:.28em}
+  .btn-solid{
+    background:var(--terra);color:var(--cream);border:1px solid var(--terra);
+  }
+  .btn-solid:hover{background:var(--terra-deep);border-color:var(--terra-deep)}
+
+  /* ---------- INVITATION ---------- */
+  .invite{background:var(--paper);text-align:center}
+  .invite p{font-size:1.06rem;line-height:2.4;color:var(--ink)}
+  .rule{width:1px;height:64px;background:var(--line);margin:0 auto 40px}
+
+  /* ---------- LAKESIDE ---------- */
+  .cycle{background:var(--cream)}
+  .cycle .narrow{text-align:center}
+  .threecol{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:38px;
+    margin-top:72px;text-align:center;
+  }
+  .threecol .k{font-size:2.1rem;letter-spacing:.1em;color:var(--terra);line-height:1}
+  .threecol .en{font-family:var(--serif-en);font-size:.72rem;letter-spacing:.34em;
+    text-transform:uppercase;color:var(--ink-soft);margin:1.2em 0 .8em}
+  .threecol .t{font-size:.96rem;color:var(--ink);margin-bottom:.4em}
+  .threecol p{font-size:.86rem;line-height:1.95}
+
+  /* ---------- PLACE ---------- */
+  .place{background:var(--terra-deep);color:var(--sand)}
+  .place .label{color:var(--gold-soft)}
+  .place h2{color:var(--cream)}
+  .place .info{
+    display:grid;grid-template-columns:1fr;gap:0;margin-top:40px;
+    border-top:1px solid rgba(239,227,211,.22);
+  }
+  .place .info div{
+    display:grid;grid-template-columns:120px 1fr;gap:18px;
+    padding:22px 4px;border-bottom:1px solid rgba(239,227,211,.22);
+    align-items:baseline;
+  }
+  .place .info dt{font-family:var(--serif-en);font-size:.74rem;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--gold-soft)}
+  .place .info dd{font-size:1rem;color:var(--sand);line-height:1.9}
+
+  /* ---------- ROOMS ---------- */
+  .phases{background:var(--cream)}
+  .phases .head{text-align:center;margin-bottom:24px}
+  .phase{
+    display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;
+    margin-top:64px;border-radius:4px;overflow:hidden;
+    box-shadow:0 24px 60px -30px rgba(124,63,41,.4);
+  }
+  .phase .ph-img{min-height:340px;background-size:cover;background-position:center}
+  .phase .ph-txt{padding:clamp(32px,5vw,60px);display:flex;flex-direction:column;justify-content:center;background:var(--paper)}
+  .phase.dark .ph-txt{background:var(--terra-deep);color:var(--sand)}
+  .phase.dark .ph-txt .pk{color:var(--cream)}
+  .phase.dark .ph-txt .pen,.phase.dark .ph-txt .spec{color:var(--gold-soft)}
+  .phase.dark .ph-txt p{color:var(--sand)}
+  .phase .pk{font-size:2.6rem;letter-spacing:.12em;line-height:1;color:var(--terra-deep)}
+  .phase .pen{font-family:var(--serif-en);font-size:.76rem;letter-spacing:.3em;
+    text-transform:uppercase;color:var(--terra);margin:1.1em 0 1.4em}
+  .phase .pline{font-size:1.15rem;color:inherit;margin-bottom:1em;letter-spacing:.06em}
+  .phase p{font-size:.92rem;margin-bottom:1.6em}
+  .phase .spec{font-family:var(--serif-en);font-size:.8rem;letter-spacing:.16em;color:var(--ink-soft)}
+  .phase:nth-child(odd) .ph-img{order:2}
+
+  /* ---------- SIGNATURE ---------- */
+  .sig{
+    position:relative;text-align:center;color:var(--sand);
+    background:#26323e;
+  }
+  .sig::before{content:"";position:absolute;inset:0;
+    background:url('assets/studio-night.jpg') center/cover no-repeat;opacity:.5}
+  .sig::after{content:"";position:absolute;inset:0;background:rgba(20,28,36,.55)}
+  .sig .wrap{position:relative;z-index:2}
+  .sig .label{color:var(--gold-soft)}
+  .sig h2{color:var(--cream)}
+  .sig p{color:var(--sand)}
+  .ritual{display:flex;justify-content:center;gap:clamp(20px,6vw,64px);margin-top:48px;flex-wrap:wrap}
+  .ritual span{font-family:var(--serif-en);font-size:.82rem;letter-spacing:.34em;
+    text-transform:uppercase;color:var(--gold-soft)}
+
+  /* ---------- FORM ---------- */
+  .reg{background:var(--paper)}
+  .reg .head{text-align:center;margin-bottom:48px}
+  form{max-width:520px;margin:0 auto}
+  .field{margin-bottom:28px}
+  .field label{display:block;font-size:.86rem;letter-spacing:.12em;
+    color:var(--ink);margin-bottom:.7em}
+  .field label .req{color:var(--terra);font-size:.78em;margin-left:.5em;letter-spacing:.1em}
+  .field input,.field select{
+    width:100%;font-family:var(--serif-jp);font-size:1rem;color:var(--ink);
+    padding:.95em 1.1em;border:1px solid var(--line);border-radius:3px;
+    background:var(--cream);transition:.3s;letter-spacing:.04em;
+  }
+  .field input:focus,.field select:focus{outline:none;border-color:var(--terra);background:#fff}
+  .field select{appearance:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23a0563a' d='M6 8 0 0h12z'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 1.1em center}
+  .consent{display:flex;gap:12px;align-items:flex-start;margin:8px 0 32px;
+    font-size:.82rem;line-height:1.8;color:var(--ink-soft)}
+  .consent input{margin-top:.45em;width:16px;height:16px;accent-color:var(--terra);flex:0 0 auto}
+  .consent a{color:var(--terra);text-underline-offset:3px}
+  form .btn-solid{width:100%;text-align:center;border:none;cursor:pointer;
+    font-family:var(--serif-jp);font-size:1rem;letter-spacing:.24em;margin-top:0}
+  .privacy-note{font-size:.76rem;color:var(--ink-soft);line-height:1.9;
+    margin-top:28px;text-align:center}
+  /* thank you */
+  .thanks{display:none;text-align:center;padding:20px 0}
+  .thanks.show{display:block;animation:fade 1s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(16px)}to{opacity:1}}
+  .thanks .motif{margin-bottom:28px}
+  .thanks h3{font-size:1.4rem;font-weight:500;letter-spacing:.1em;margin-bottom:1em;color:var(--ink)}
+  .thanks p{color:var(--ink-soft)}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--terra-deep);color:var(--sand);text-align:center;padding:80px 28px 56px}
+  footer .f-logo{width:104px;margin:0 auto 28px;border-radius:50%;opacity:.95}
+  footer .f-name{font-family:var(--serif-en);letter-spacing:.34em;font-size:.92rem;margin-bottom:1.6em}
+  footer .f-loc{font-size:.82rem;color:var(--gold-soft);line-height:1.9;letter-spacing:.1em}
+  footer .f-priv{font-size:.72rem;color:rgba(239,227,211,.62);max-width:44em;margin:32px auto 0;line-height:1.9}
+  footer .f-copy{font-family:var(--serif-en);font-size:.7rem;letter-spacing:.2em;color:rgba(239,227,211,.5);margin-top:32px}
+
+  @media(max-width:760px){
+    .threecol{grid-template-columns:1fr;gap:48px}
+    .phase{grid-template-columns:1fr}
+    .phase:nth-child(odd) .ph-img{order:0}
+    .phase .ph-img{min-height:260px}
+    .place .info div{grid-template-columns:96px 1fr;gap:12px}
+    body{font-size:15.5px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="hero-inner">
+    <img class="hero-logo" src="assets/logo-terracotta.jpg" alt="Pilates Studio SUI">
+    <p class="eyebrow">Pilates Studio SUI ｜ Shibuya</p>
+    <h1>ひと息、湖畔へ。</h1>
+    <p class="sub-en">A single breath, to the lakeside.</p>
+    <p class="meta">2026.09.01 GRAND OPEN ｜ 渋谷・宮下公園</p>
+    <p class="lead">7月のティザー公開に先立って。<br>SUIに連なる方々へ、ひと足はやく、最初のご案内を。</p>
+    <a href="#register" class="btn">先行登録へ</a>
+  </div>
+</header>
+
+<!-- ===================== INVITATION ===================== -->
+<section class="invite">
+  <div class="wrap narrow rise">
+    <span class="label">Invitation</span>
+    <div class="rule"></div>
+    <h2>最初に、お伝えしたい方へ。</h2>
+    <p>社員、その家族。ともに歩んできた、お取引先。<br>
+       そして、代表と仲間たちの、友人。<br><br>
+       湖畔は、近くにいる方から、静かに。<br>
+       割引価格が整い次第、メールにて、ひと足はやく。</p>
+  </div>
+</section>
+
+<!-- ===================== THE LAKESIDE ===================== -->
+<section class="cycle">
+  <div class="wrap narrow rise">
+    <div class="motif" aria-hidden="true">
+      <!-- 月と水面 -->
+      <svg width="46" height="30" viewBox="0 0 46 30">
+        <path d="M30 2a11 11 0 100 18 9 9 0 010-18z" fill="none" stroke="#a0563a" stroke-width="1.2"/>
+        <path d="M4 26q6-4 12 0t12 0 12 0" fill="none" stroke="#a0563a" stroke-width="1" opacity=".7"/>
+      </svg>
+    </div>
+    <span class="label">The Lakeside</span>
+    <h2>都市の中の、湖畔へ。<span class="en">A lakeside, in the heart of the city.</span></h2>
+    <p>都市は、絶えず波打っている。通知、視線、評価、予定。<br>
+       わたしたちは、外側のざわめきに、自分を覆い隠している。<br>
+       けれど、すべての人の内側に、ひとつの湖。<br>
+       SUIは、その畔（ほとり）に佇むための場所。</p>
+
+    <div class="threecol">
+      <div>
+        <div class="k">水</div>
+        <div class="en">Flow</div>
+        <div class="t">水のような身体</div>
+        <p>形を持たず、本質を失わず。月に応えて、満ち、引く。SUIが育てる、新しい身体感覚。</p>
+      </div>
+      <div>
+        <div class="k">吸</div>
+        <div class="en">Breath</div>
+        <div class="t">内へ取り込む、ひと息</div>
+        <p>すべての始まりは、ひと息。動くより前の、最初の所作。レッスンは、ここから。</p>
+      </div>
+      <div>
+        <div class="k">粋</div>
+        <div class="en">Refinement</div>
+        <div class="t">押しつけない、品格</div>
+        <p>余白を残し、語らず滲ませる。江戸からつづく美意識が、空間と佇まいを貫く。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== THE PLACE ===================== -->
+<section class="place">
+  <div class="wrap narrow rise">
+    <span class="label">The Place</span>
+    <h2>渋谷の喧騒に、ひとつの水面（みなも）。<span class="en">Still water, at the heart of Shibuya.</span></h2>
+    <p style="color:var(--sand);opacity:.9">明治通りと宮下公園に隣接する、都市の交差点。<br>扉の向こうに広がるのは、水音のような静けさ。</p>
+    <dl class="info">
+      <div><dt>Location</dt><dd>東京都渋谷区渋谷一丁目17番19<br>TOKYU REIT 渋谷宮下公園ビル 2F</dd></div>
+      <div><dt>Area</dt><dd>約 180㎡（2F フロア専有）</dd></div>
+      <div><dt>Open</dt><dd>2026年9月1日（火）Grand Open</dd></div>
+      <div><dt>Studios</dt><dd>月 Tsuki ・ 陽 Yō ・ 畔 Hotori — 三つの間</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ===================== THREE ROOMS ===================== -->
+<section class="phases">
+  <div class="wrap">
+    <div class="head narrow rise">
+      <span class="label">Three Rooms</span>
+      <h2>三つの間、三つの時間。<span class="en">Three rooms, three rhythms of the day.</span></h2>
+      <p>月・陽・畔。それぞれが、湖畔の異なる時間と、異なる深さ。<br>SUIは一日の波に寄り添う、ひとつの時計のように。</p>
+    </div>
+
+    <!-- 月 Tsuki -->
+    <div class="phase dark rise">
+      <div class="ph-img" style="background-image:url('assets/studio-bo.jpg')"></div>
+      <div class="ph-txt">
+        <div class="pk">月 <span style="font-size:.4em;letter-spacing:.2em">TSUKI</span></div>
+        <div class="pen">Moonlight · Group · Evening</div>
+        <div class="pline">一日の波が、静まる場所。</div>
+        <p>ヴォールトの曲面に、淡い灯りが満ちる、夜の湖畔。外へ伸びていた意識を、ひとつひとつの動きで内側へ沈める。一日の終わりに、自分を取り戻す時間。</p>
+        <div class="spec">49.07㎡ ｜ Reformer × 9 ｜ 最大 9 名</div>
+      </div>
+    </div>
+
+    <!-- 陽 Yō -->
+    <div class="phase rise">
+      <div class="ph-img" style="background-image:url('assets/studio-gen-day.jpg')"></div>
+      <div class="ph-txt">
+        <div class="pk">陽 <span style="font-size:.4em;letter-spacing:.2em">YŌ</span></div>
+        <div class="pen">Daylight · Group · Morning</div>
+        <div class="pline">一日が、ひらく場所。</div>
+        <p>白いリネンの向こうから、朝の光が水面のように差し込む。リフォーマーとチェアの組み合わせで、眠っていた身体を、軽やかに、しなやかに目覚めさせる。</p>
+        <div class="spec">41.72㎡ ｜ Reformer × 5 + Chair × 5</div>
+      </div>
+    </div>
+
+    <!-- 畔 Hotori -->
+    <div class="phase dark rise">
+      <div class="ph-img" style="background-image:url('assets/studio-night.jpg')"></div>
+      <div class="ph-txt">
+        <div class="pk">畔 <span style="font-size:.4em;letter-spacing:.2em">HOTORI</span></div>
+        <div class="pen">Lakeside · Personal · Anytime</div>
+        <div class="pline">ひとり、湖畔に座る時間。</div>
+        <p>扉が閉まる。世界が、ふたりだけになる。リハビリ、産前産後、競技力向上。あなただけの物語に、フル装備のマシンと指導者の耳が、深く向き合う。</p>
+        <div class="spec">21.46㎡ ｜ Reformer · Cadillac · Barrel</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SIGNATURE ===================== -->
+<section class="sig">
+  <div class="wrap narrow rise">
+    <span class="label">Signature</span>
+    <h2>レッスンは、一分間の呼吸から。<span class="en">One minute of breath. Then everything begins.</span></h2>
+    <p>動くより前に、ただ座って、息をする。<br>湖畔に佇むように。</p>
+    <div class="ritual">
+      <span>Arrive</span><span>Sit</span><span>Breathe</span><span>Begin</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRE-REGISTRATION ===================== -->
+<section class="reg" id="register">
+  <div class="wrap">
+    <div class="head narrow rise">
+      <span class="label">Pre-Registration ｜ 先行登録</span>
+      <h2>お名前を、お預かりします。</h2>
+      <p>割引価格が整い次第、メールにて先行ご案内をお送りします。<br>関係者の皆さまから、静かに。</p>
+    </div>
+
+    <!-- =======================================================================
+         GoogleフォームへPOSTする（デザインは自作のまま／データはGoogleフォーム→スプレッドシートへ）
+         ▼ セットアップ手順（後で差し替える3点）:
+         1) Googleフォームを新規作成し、質問を3つ用意:
+              ・お名前（記述式・短文）
+              ・メールアドレス（記述式・短文）
+              ・ご関係（ラジオ or プルダウン）
+         2) フォームの「事前入力したURLを取得」を開き、各質問に仮の値を入れて
+            生成されたURLから entry.XXXXXXX の番号を確認する。
+         3) 下記を差し替える:
+              ・form action の FORM_ID
+              ・各 input/select の name="entry.XXXXXXX"
+         ※ action 末尾は /formResponse のままにする（/viewform ではない）。
+         ======================================================================= -->
+    <form id="suiForm"
+          action="https://docs.google.com/forms/d/e/REPLACE_WITH_FORM_ID/formResponse"
+          method="POST"
+          target="hidden_iframe">
+      <div class="field">
+        <label for="f-name">お名前 <span class="req">必須</span></label>
+        <input type="text" id="f-name" name="entry.REPLACE_NAME" required autocomplete="name" placeholder="山田 花子">
+      </div>
+      <div class="field">
+        <label for="f-email">メールアドレス <span class="req">必須</span></label>
+        <input type="email" id="f-email" name="entry.REPLACE_EMAIL" required autocomplete="email" placeholder="example@mail.com">
+      </div>
+      <div class="field">
+        <label for="f-rel">ご関係 <span class="req">必須</span></label>
+        <select id="f-rel" name="entry.REPLACE_RELATION" required>
+          <option value="" disabled selected>お選びください</option>
+          <option value="社員">社員</option>
+          <option value="ご家族">ご家族</option>
+          <option value="お取引先">お取引先</option>
+          <option value="代表の友人">代表の友人</option>
+          <option value="社員の友人">社員の友人</option>
+          <option value="その他">その他</option>
+        </select>
+      </div>
+      <label class="consent">
+        <input type="checkbox" id="f-consent" required>
+        <span>個人情報の取り扱いに同意し、SUIからの先行ご案内メールの受信に同意します。<a href="#privacy">取り扱いについて</a></span>
+      </label>
+      <button type="submit" class="btn-solid">登録する</button>
+      <p class="privacy-note">いただいたお名前・メールアドレス・ご関係は、SUIの先行ご案内およびご連絡にのみ利用します。<br>第三者への提供は行いません。</p>
+    </form>
+
+    <!-- thank-you -->
+    <div class="thanks narrow" id="suiThanks">
+      <div class="motif" aria-hidden="true">
+        <svg width="46" height="30" viewBox="0 0 46 30">
+          <path d="M30 2a11 11 0 100 18 9 9 0 010-18z" fill="none" stroke="#a0563a" stroke-width="1.2"/>
+          <path d="M4 26q6-4 12 0t12 0 12 0" fill="none" stroke="#a0563a" stroke-width="1" opacity=".7"/>
+        </svg>
+      </div>
+      <h3>お名前を、お預かりしました。</h3>
+      <p>割引価格が整い次第、メールにてお知らせします。<br>ひと息の時を、お待ちください。</p>
+    </div>
+  </div>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none"></iframe>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer id="privacy">
+  <img class="f-logo" src="assets/logo-terracotta.jpg" alt="Pilates Studio SUI">
+  <div class="f-name">PILATES STUDIO SUI</div>
+  <div class="f-loc">東京都渋谷区渋谷一丁目17番19 TOKYU REIT 渋谷宮下公園ビル 2F<br>2026.09.01 Grand Open</div>
+  <p class="f-priv">【個人情報の取り扱い】 ご登録いただくお名前・メールアドレス・ご関係は、Pilates Studio SUI からの先行ご案内およびご連絡のみに利用し、ご本人の同意なく第三者へ提供することはありません。配信停止のご希望は、お送りするメールよりいつでも承ります。<!-- TODO(法務/桐生): 運営会社名・問い合わせ先・特商法表記を確定後に追記 --></p>
+  <div class="f-copy">© 2026 Pilates Studio SUI</div>
+</footer>
+
+<script>
+  // reveal on scroll
+  const io=new IntersectionObserver((es)=>{
+    es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+  },{threshold:.14});
+  document.querySelectorAll('.rise').forEach(el=>io.observe(el));
+
+  // form -> Google Form (hidden iframe submit), then show thank-you
+  const form=document.getElementById('suiForm');
+  const thanks=document.getElementById('suiThanks');
+  form.addEventListener('submit',()=>{
+    // ネイティブ送信は hidden_iframe に対して行われる（CORSを回避）
+    setTimeout(()=>{
+      form.style.display='none';
+      thanks.classList.add('show');
+      thanks.scrollIntoView({behavior:'smooth',block:'center'});
+    },400);
+  });
+</script>
+</body>
+</html>
